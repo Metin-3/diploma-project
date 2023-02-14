@@ -1,0 +1,39 @@
+#reservation {
+    background-image: url("../../images/reservationHeader.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.reservation-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.reservation-header h1 {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 55px;
+}
+
+.reservation-header p {
+    font-family: sans-serif;
+    font-weight: 300 !important;
+}
+
+@media(max-width: 768px) {
+    .reservation-header h1 {
+        font-size: 35px;
+    }
+
+    .reservation-header p {
+        font-size: 14px;
+    }
+}

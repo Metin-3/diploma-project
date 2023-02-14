@@ -1,0 +1,14 @@
+.lunch-paralax {
+    background-image: url("../../images/lunchParalax.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+}
+
+.lunch-header {
+    font-family: 'Gothic A1', sans-serif;
+}

@@ -1,0 +1,62 @@
+#book-table {
+    padding: 80px 0;
+}
+
+#book-table input {
+    outline: none;
+    border: 1px solid #555;
+    border-radius: 5px;
+
+}
+
+#book-table select {
+    outline: none;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+#book-table button {
+    border: 2px solid #ffb606;
+    border-radius: 5px;
+    color: #2a2a2a;
+    background-color: #ffb606;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+#book-table button:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #2a2a2a;
+}
+
+.table-header {
+    text-align: center;
+}
+
+.table-header h2 {
+    font-family: 'Pacifico', cursive;
+    color: #ffb606;
+    font-weight: 400;
+    font-size: 34px;
+}
+
+.table-header h1 {
+    text-transform: uppercase;
+    color: #2a2a2a;
+    font-size: 54px;
+    font-weight: 800;
+    font-style: normal;
+    font-family: inherit;
+}
+
+.table-content {
+    padding: 40px 0 0 0;
+    text-align: center;
+    color: #555;
+}
+
+.table-content span {
+    font-weight: 700;
+}

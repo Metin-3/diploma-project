@@ -1,0 +1,69 @@
+/*! food */
+.food-header {
+    background-image: url("../../images/bg-food.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 120px;
+    position: relative;
+    margin: 30px 0;
+}
+
+.header-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.name-and-price {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.name-and-price h5 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #222;
+}
+
+.name-and-price p {
+    font-weight: 700;
+    color: #222;
+}
+
+.name-and-price div {
+    color: #999;
+    width: 95%;
+    border-bottom: 1px dashed #999;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+}
+
+.menu-content {
+    color: #777;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*! drink */
+.drink-header {
+    background-image: url("../../images/bg-drink.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 120px;
+    position: relative;
+    margin: 30px 0;
+}
+
+@media(max-width: 592px) {
+    .name-and-price h5 {
+        font-size: 14px;
+    }
+}

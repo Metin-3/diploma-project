@@ -1,0 +1,11 @@
+#right-sidebar-content {
+    padding: 50px 0;
+}
+
+
+.right-sidebar-content-text p {
+    color: #777;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+}

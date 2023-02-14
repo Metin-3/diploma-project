@@ -1,0 +1,126 @@
+#about-standards {
+    padding: 50px 0;
+}
+
+.about-standards-header {
+    text-align: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+.about-standards-header::after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    width: 100px;
+    height: 2px;
+    background-color: #ffb606;
+}
+
+.about-standards-header::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    height: 2px;
+    background-color: #ffb606;
+}
+
+.about-standards-header p {
+    font-family: 'Pacifico', cursive;
+    color: #ffb606;
+    font-size: 35px;
+}
+
+.about-standards-header h1 {
+    font-family: inherit;
+    font-size: 50px;
+    font-weight: 800;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.about-standards-center {
+    width: 2px;
+    height: auto;
+    background-color: #888;
+    border-radius: 50px;
+    position: relative;
+}
+
+.about-standards-center::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 10px;
+    height: 10px;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #888;
+}
+
+.about-standards-center::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 10px;
+    height: 10px;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #888;
+}
+
+.about-standards-content-left {
+    text-align: end;
+}
+
+.about-standards-content h3 {
+    color: #ffb606;
+    font-family: 'Yantramanav', sans-serif;
+}
+
+.about-standards-content p {
+    color: #888;
+}
+
+.about-standards-paralax {
+    background-image: url("../../images/standardsParalax.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 70vh;
+}
+
+@media(max-width: 768px) {
+    .about-standards-header h1 {
+        font-size: 30px;
+    }
+
+    .about-standards-center::after {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    .about-standards-center::before {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    .about-standards-content-left {
+        text-align: start;
+    }
+
+    .about-standards-paralax {
+        height: 50vh;
+    }
+}

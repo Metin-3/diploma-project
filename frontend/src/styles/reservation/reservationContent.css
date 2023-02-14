@@ -1,0 +1,31 @@
+.reservation-content-left h1 {
+    font-weight: 300;
+    font-family: 'Yantramanav', sans-serif;
+
+}
+
+.reservation-content-left p {
+    color: #777;
+}
+
+.reservation-content-left h5 {
+    font-family: 'Yantramanav', sans-serif;
+}
+
+.reservation-content-right h1 {
+    font-weight: 300;
+    font-family: 'Yantramanav', sans-serif;
+}
+
+.reservation-content-right p {
+    color: #777;
+}
+
+.reservation-content-right a {
+    text-decoration: none;
+    color: #ffb606;
+}
+
+.reservation-content-right a:hover {
+    color: #d99a08de;
+}

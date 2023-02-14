@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#events {
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+}
+
+.events-header p {
+    font-family: 'Pacifico', cursive;
+    color: #ffb606;
+    font-size: 35px;
+}
+
+.events-inner {
+    padding: 50px 0;
+}
+
+.events-header h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 55px;
+}
+
+.events-paralax {
+    background-image: url(../../images/eventParalax.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item-content {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start !important;
+}
+
+.inner-event-slider-content h5 {
+    color: #222;
+    font-weight: 700;
+}
+
+.inner-event-slider-content p {
+    color: #666;
+}
+
+
+.carousel-item-content .button {
+    color: #ffb606;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.carousel-item-content .button:hover {
+    color: #222;
+}
+
+.inner-slider {
+    padding: 50px 0;
+}
+
+.event-slider-img {
+    width: 40%;
+    height: auto;
+}
+
+
+.inner-event-slider-content {
+    width: 40%;
+    color: #000;
+    background-color: #dcdcdc;
+    padding: 20px 10px;
+}
+
+
+.inner-date {
+    width: 20%;
+    background-color: #ffb606;
+}
+
+.events-slider-button {
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #999;
+}
+
+.events-slider-button-active {
+    background-color: #ffb606;
+}
+
+.inner-date {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.date-boxs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.date-box {
+    border: 1px solid #f9c943;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background-color: #f9c943;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222 !important;
+}
+
+.date-box p {
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+.date-box p span {
+    display: block;
+    font-size: 15px;
+}
+
+@media(max-width: 992px) {
+    .carousel-item-content {
+        display: block;
+    }
+
+    .event-slider-img {
+        width: 100%;
+    }
+
+    .inner-event-slider-content {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .inner-date {
+        width: 100%;
+        padding: 20px 10px;
+    }
+}
