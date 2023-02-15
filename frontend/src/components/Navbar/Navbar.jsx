@@ -73,7 +73,7 @@ const Navbar = () => {
                                         </li>
                                         <hr className='me-3' />
                                         <li className='navbar-list-dropdown-item'>
-                                            <Link to="/" className='navbar-list-dropdown-item-link'>Home Coffee</Link>
+                                            <Link to="homecoffee" className='navbar-list-dropdown-item-link'>Home Coffee</Link>
                                         </li>
                                         <hr className='me-3' />
                                         <li className='navbar-list-dropdown-item'>
@@ -218,7 +218,7 @@ const Navbar = () => {
                             </li>
                             <hr className='me-3' />
                             <li className='navbar-list-dropdown-item-mobil'>
-                                <Link to="/" className='navbar-list-dropdown-item-link-mobil'>Home Coffee</Link>
+                                <Link to="homecoffee" className='navbar-list-dropdown-item-link-mobil'>Home Coffee</Link>
                             </li>
                             <hr className='me-3' />
                             <li className='navbar-list-dropdown-item-mobil'>

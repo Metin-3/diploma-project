@@ -1,9 +1,8 @@
 import React from 'react';
-import slide1 from "../../images/hero_slide_1.webp";
-import slide2 from "../../images/hero_slide_2.webp";
-import '../../styles/home/header.css'
+import slide1 from "../../images/coffeHome1.webp";
+import slide2 from "../../images/coffeehome2.webp";
 
-const Header = () => {
+const HomeCoffeeHeader = () => {
     return (
         <>
             <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -13,9 +12,9 @@ const Header = () => {
                         <div className='slide-content'>
                             <h2>Resca</h2>
                             <h1>Restaurant</h1>
-                            <p>Lawrence & Frederick</p>
+                            <p>ONE PLACE, ONE HISTORY</p>
                             <div className='text-center'>
-                                <button>Look menu</button>
+                                <button>CHECK OUR MENU</button>
                             </div>
                         </div>
                     </div>
@@ -32,14 +31,16 @@ const Header = () => {
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                    <i class="fa-solid fa-arrow-left-long slide-next-prev-btn"></i>
+                    <i className="fa-solid fa-arrow-left-long slide-next-prev-btn"></i>
+                    <span className="visually-hidden">Previous</span>
                 </button>
                 <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                    <i class="fa-solid fa-arrow-right-long slide-next-prev-btn"></i>
+                    <i className="fa-solid fa-arrow-right-long slide-next-prev-btn"></i>
+                    <span className="visually-hidden">Next</span>
                 </button>
             </div>
         </>
     )
 }
 
-export default Header
+export default HomeCoffeeHeader

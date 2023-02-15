@@ -7,6 +7,7 @@ import Events from "../page/Events";
 import Features from "../page/Features";
 import Gallery from "../page/Gallery";
 import Home from "../page/Home";
+import HomeCoffee from "../page/HomeCoffee";
 import LeftSidebar from "../page/LeftSidebar";
 import Menu from "../page/Menu";
 import Reservation from "../page/Reservation";
@@ -23,6 +24,10 @@ const ROUTES = [
             {
                 path: "/",
                 element: <Home />
+            },
+            {
+                path: 'homecoffee',
+                element: <HomeCoffee />
             },
             {
                 path: "menu",

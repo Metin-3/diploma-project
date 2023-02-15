@@ -1,0 +1,129 @@
+#coffee-story {
+    padding: 50px 0;
+}
+
+.coffee-story-header {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.coffee-story-header h5 {
+    font-family: 'Pacifico', cursive;
+    color: #ffb606;
+    font-size: 35px;
+}
+
+.coffee-story-header h1 {
+    font-family: inherit;
+    font-size: 50px;
+    font-weight: 800;
+    color: #333;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.coffee-story-header h1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90px;
+    height: 2px;
+    background-color: #ffb606;
+}
+
+.coffee-story-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 90px;
+    height: 2px;
+    background-color: #ffb606;
+}
+
+
+.coffee-story-header p {
+    text-align: center;
+    color: #666;
+    padding: 50px 0 20px 0;
+}
+
+.coffee-story-header button {
+    border: 1px solid #333;
+    padding: 8px 20px;
+    background-color: transparent;
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.coffee-story-header button:hover {
+    border-color: #ffb606;
+    background-color: #ffb606;
+}
+
+.coffee-story-img {
+    height: 400px;
+}
+
+.coffee-story-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.coffee-story-content {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.coffee-story-content h4 {
+    color: #ffb606;
+}
+
+.coffee-story-content p {
+    color: #666;
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 18px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.coffee-story-content p span {
+    color: #555;
+    font-weight: 600;
+}
+
+.coffee-story-content p a {
+    text-decoration: none;
+    color: #ffb606;
+}
+
+.coffee-story-content p a:hover {
+    color: #ca9007;
+}
+
+.coffee-story-content button {
+    border: 1px solid #222;
+    padding: 8px 18px;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    transition: 0.3s;
+}
+
+.coffee-story-content button:hover {
+    border-color: #ffb606;
+    background-color: #ffb606;
+}

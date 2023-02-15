@@ -12,6 +12,8 @@
 .slide-content h2 {
     font-family: 'Pacifico', cursive;
     color: #ffb606;
+    animation: fadeInDown;
+    animation-duration: 1s;
 }
 
 .slide-content h1 {
@@ -19,6 +21,8 @@
     text-transform: uppercase;
     font-size: 50px;
     font-weight: 800;
+    animation: fadeInDown;
+    animation-duration: 1s;
 }
 
 .slide-content p {
@@ -27,6 +31,8 @@
     color: #fff;
     text-transform: uppercase;
     font-family: sans-serif;
+    animation: fadeInRight;
+    animation-duration: 1s;
 }
 
 .slide-content p::before {
@@ -61,11 +67,25 @@
     word-spacing: 1px;
     letter-spacing: 1px;
     transition: 0.4s;
+    animation: fadeInLeft;
+    animation-duration: 1s;
 }
 
 .slide-content button:hover {
     background-color: #222;
     color: #fff;
+}
+
+.slide-next-prev-btn {
+    font-size: 25px;
+    color: #000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffb606;
 }
 
 @media(max-width: 768px) {
@@ -88,5 +108,10 @@
 
     .slide-icon {
         display: none;
+    }
+
+    .slide-next-prev-btn {
+        padding: 3px;
+        font-size: 18px;
     }
 }
