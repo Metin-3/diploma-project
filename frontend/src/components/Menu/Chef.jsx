@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/menu/chef.css';
-import menu1 from '../../images/menu1.webp';
-import menu2 from '../../images/menu2.webp';
 
 const Chef = () => {
+
+    //! GET CHEF
+    const [chefs, setChefs] = useState([]);
+
+    const getChefs = () => {
+        fetch("http://localhost:8080/chef")
+            .then(res => res.json())
+            .then(data =>
+                setChefs(data)
+            )
+    }
+
+    useEffect(() => {
+        getChefs()
+    }, [])
+
     return (
         <section id="chef">
             <div className="container">
@@ -13,35 +27,29 @@ const Chef = () => {
                             <h1 className='header-center'>CHEF</h1>
                         </div>
                     </div>
-                    <div className="col-xl-6 col-lg-10 col-md-12 col-sm-12">
-                        <div className='menu-card'>
-                            <div className='menu-img'>
-                                <img src={menu1} alt="" />
+                    <div className="row justify-content-center">
+                        {chefs && chefs.map(({ _id, chefImage, chefName, chefContent, chefPrice }) => (
+                            <div key={_id} className="col-xl-6 col-lg-10 col-md-12 col-sm-12 my-2">
+                                <div className="card mb-3" >
+                                    <div className="row align-items-center g-0">
+                                        <div className="col-md-2 col-sm-3">
+                                            <img src={chefImage} className="food-img" alt="..." />
+                                        </div>
+                                        <div className="col-md-8 col-sm-9">
+                                            <div className="card-body">
+                                                <h6 className="card-title">{chefName}</h6>
+                                                <p className="card-text">{chefContent}</p>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-2 col-sm-12">
+                                            <div className="card-body">
+                                                <p className="card-text">Price <br /><small className="text-muted">{chefPrice}</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className='menu-content'>
-                            <h5>CONTINENTAL BREAKFAST</h5>
-                                <p>Zucchini, basil, Grana Padano, baby spinach, lemon vinaigrette</p>
-                            </div>
-                            <div className='menu-price'>
-                                <h6>Price</h6>
-                                <p>9.9</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className=" col-xl-6 col-lg-10 col-md-12 col-sm-12">
-                        <div className='menu-card'>
-                            <div className='menu-img'>
-                                <img src={menu2} alt="" />
-                            </div>
-                            <div className='menu-content'>
-                                <h5>CONTINENTAL BREAKFAST</h5>
-                                <p>Zucchini, basil, Grana Padano, baby spinach, lemon vinaigrette</p>
-                            </div>
-                            <div className='menu-price'>
-                                <h6>Price</h6>
-                                <p>15</p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>

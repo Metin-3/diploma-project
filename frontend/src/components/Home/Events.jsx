@@ -32,6 +32,7 @@ const Events = () => {
         setHours(timeHours);
     }
 
+
     setInterval(updateSeconds, 1000);
     setInterval(updateMinutes, 1);
     setInterval(updateHours, 1);

@@ -1,0 +1,152 @@
+#events {
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+}
+
+.winery-events-header p {
+    font-family: 'Pacifico', cursive;
+    color: #cea567;
+    font-size: 35px;
+}
+
+.events-inner {
+    padding: 50px 0;
+}
+
+.winery-events-header h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 55px;
+}
+
+.winery-events-paralax {
+    background-image: url(../../images/coffeehome2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item-content {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start !important;
+}
+
+.winery-inner-event-slider-content h5 {
+    color: #cea567;
+    font-weight: 700;
+}
+
+.winery-inner-event-slider-content p {
+    color: #666;
+}
+
+
+.winery-inner-event-slider-content .button {
+    color: #cea567;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.carousel-item-content .button:hover {
+    color: #222;
+}
+
+.inner-slider {
+    padding: 50px 0;
+}
+
+.event-slider-img {
+    width: 40%;
+    height: auto;
+}
+
+
+.winery-inner-event-slider-content {
+    width: 40%;
+    color: #000;
+    padding: 20px 10px;
+    background-color: #fff;
+}
+
+
+.winery-inner-date {
+    width: 20%;
+    background-color: #cea567;
+}
+
+.winery-events-slider-button {
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #999;
+}
+
+.winery-events-slider-button-active {
+    background-color: #cea567;
+}
+
+.winery-inner-date {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.winery-date-boxs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.winery-date-box {
+    border: 1px solid #cea567;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background-color: #e8c796;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222 !important;
+}
+
+.winery-date-box p {
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+.winery-date-box p span {
+    display: block;
+    font-size: 15px;
+}
+
+@media(max-width: 992px) {
+    .carousel-item-content {
+        display: block;
+    }
+
+    .event-slider-img {
+        width: 100%;
+    }
+
+    .winery-inner-event-slider-content {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .winery-inner-date {
+        width: 100%;
+        padding: 20px 10px;
+    }
+}

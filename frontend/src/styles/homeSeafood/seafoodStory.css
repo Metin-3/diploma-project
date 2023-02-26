@@ -1,0 +1,82 @@
+#seafood-story {
+    padding: 50px 0;
+}
+
+.seafood-story-header {
+    text-align: center;
+}
+
+.seafood-story-header h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+    color: #004e99;
+}
+
+.seafood-story-header h1 {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 50px;
+    padding: 10px 0 30px 0;
+    color: #333;
+    position: relative;
+}
+
+.seafood-story-header h1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 70px;
+    height: 2px;
+    background-color: #004e99;
+}
+
+.seafood-story-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 70px;
+    height: 2px;
+    background-color: #004e99;
+}
+
+.seafood-story-header p {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    padding: 30px;
+}
+
+.seafood-story-header button {
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 8px 20px;
+    margin-bottom: 30px;
+    color: #004e99;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.seafood-story-header button:hover {
+    border-color: #004e99;
+    background-color: #004e99;
+    color: #fff;
+}
+
+.seafood-story-img {
+    width: auto;
+    height: 350px;
+    overflow: hidden;
+}
+
+.seafood-story-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.seafood-story-img:hover .seafood-image {
+    transform: scale(1.2);
+}

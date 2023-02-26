@@ -20,7 +20,7 @@
     transform: translate(-50%, -50%);
     color: #fff;
     font-family: 'Gothic A1', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .all-menu {
@@ -36,7 +36,7 @@
 
 .all-menu-btn {
     border: none;
-    padding: 5px 20px;
+    padding: 5px 15px;
     border-bottom: 2px solid #e8e8e8;
     background-color: #fff;
     display: block;
@@ -64,6 +64,7 @@
 
 .inner-menu-card-breakfast-active {
     display: block;
-    animation: zoomIn;
-    animation-duration: 1.8s;
+    /* animation: zoomIn; */
+    animation: fadeInUp;
+    animation-duration: 1.5s;
 }

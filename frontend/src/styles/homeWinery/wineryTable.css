@@ -1,0 +1,67 @@
+#winery-table {
+    padding: 80px 0;
+    background-image: url("../../images/wineryTable.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+#winery-table input {
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+}
+
+#winery-table select {
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+#winery-table button {
+    border: 2px solid #cea567;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #cea567;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+#winery-table button:hover {
+    background-color: #2a2a2a;
+    border-color: #2a2a2a;
+}
+
+.seafood-table-header {
+    text-align: center;
+}
+
+.seafood-table-header h2 {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    font-weight: 400;
+    font-size: 34px;
+}
+
+.seafood-table-header h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 54px;
+    font-weight: 800;
+    font-style: normal;
+    font-family: inherit;
+}
+
+.table-content {
+    padding: 40px 0 0 0;
+    text-align: center;
+    color: #fff;
+}
+
+.table-content span {
+    font-weight: 700;
+}

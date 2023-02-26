@@ -1,15 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/event/eventContent.css';
 import { Link } from 'react-router-dom';
-import event1 from '../../images/event1.webp';
-import event2 from '../../images/event2.webp';
-import event3 from '../../images/event3.webp';
-import event4 from '../../images/event4.webp';
-import event5 from '../../images/event5.webp';
-import event6 from '../../images/from1.webp';
-import event7 from '../../images/event6.webp';
-import event8 from '../../images/event7.webp';
-import event9 from '../../images/event8.webp';
 import logoAbout from '../../images/logoAbout.webp';
 import ins1 from '../../images/ins1.webp';
 import ins2 from '../../images/ins2.webp';
@@ -23,6 +14,22 @@ import ins9 from '../../images/ins9.webp';
 
 
 const EventContent = () => {
+
+    //! GET EVENTS
+    const [events, setEvents] = useState([]);
+
+    const getEvents = () => {
+        fetch("http://localhost:8080/event")
+            .then(res => res.json())
+            .then(data =>
+                setEvents(data)
+            )
+    }
+
+    useEffect(() => {
+        getEvents()
+    }, [])
+
     return (
         <section id='event-content'>
             <div className="container">
@@ -30,195 +37,29 @@ const EventContent = () => {
                     <div className="col-xl-9 xol-lg-9 col-md-12 col-sm-12">
                         <hr />
                         <div className="row justify-content-center">
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-3">
-                                <div className="card event-card h-100">
-                                    <div className='event-card-img'>
-                                        <img src={event4} className="card-img-top" alt="..." />
-                                        <div className='event-read-more'>
-                                            <button>Read more</button>
+                            {events && events.map((event) => (
+                                <div key={event._id} className="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-3">
+                                    <div className="card event-card h-100">
+                                        <div className='event-card-img'>
+                                            <img src={event.eventImage} className="card-img-top" alt="..." />
+                                            <div className='event-read-more'>
+                                                <Link to={`${event._id}`}><button>Read more</button></Link>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="card-body card-event-content">
-                                        <h5 className="card-title py-3"><Link to="" className='card-title-link'>Big Sale</Link></h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste commodi reiciendis fugit qui quia ut, non omnis dignissimos</p>
-                                    </div>
-                                    <div className="card-event-footer px-3">
-                                        <h6>11 <br /><span>MAY</span></h6>
-                                        <div className='card-time'>
-                                            <span className='d-block py-2'><i className="fa-regular fa-clock"></i> 02:30-20:30</span>
-                                            <span className='d-block py-2'><i className="fa-solid fa-location-dot"></i> LONDON</span>
+                                        <div className="card-body card-event-content">
+                                            <h5 className="card-title py-3"><Link to={`${event._id}`} className='card-title-link'>{event.eventName}</Link></h5>
+                                            <p className="card-text">{event.eventContent}</p>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-3">
-                                <div className="card event-card h-100">
-                                    <div className='event-card-img'>
-                                        <img src={event5} className="card-img-top" alt="..." />
-                                        <div className='event-read-more'>
-                                            <button>Read more</button>
-                                        </div>
-                                    </div>
-                                    <div className="card-body card-event-content">
-                                        <h5 className="card-title py-3"><Link to="" className='card-title-link'>Live Music</Link></h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste commodi reiciendis fugit qui quia ut, non omnis dignissimos</p>
-                                    </div>
-                                    <div className="card-event-footer px-3">
-                                        <h6>01<br /><span>SEP</span></h6>
-                                        <div className='card-time'>
-                                            <span className='d-block py-2'><i className="fa-regular fa-clock"></i> 16:00-22:30</span>
-                                            <span className='d-block py-2'><i className="fa-solid fa-location-dot"></i> LIVERPOOL</span>
+                                        <div className="card-event-footer px-3">
+                                            <h6>{event.eventDate}</h6>
+                                            <div className='card-time'>
+                                                <span className='d-block py-2'><i className="fa-regular fa-clock"></i> {event.eventTimeStart}-{event.eventTimeEnd}</span>
+                                                <span className='d-block py-2'><i className="fa-solid fa-location-dot"></i> {event.eventLocation}</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-3">
-                                <div className="card event-card h-100">
-                                    <div className='event-card-img'>
-                                        <img src={event6} className="card-img-top" alt="..." />
-                                        <div className='event-read-more'>
-                                            <button>Read more</button>
-                                        </div>
-                                    </div>
-                                    <div className="card-body card-event-content">
-                                        <h5 className="card-title py-3"><Link to="" className='card-title-link'>Wine Tastings</Link></h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste commodi reiciendis fugit qui quia ut, non omnis dignissimos</p>
-                                    </div>
-                                    <div className="card-event-footer px-3">
-                                        <h6>20 <br /><span>NOV</span></h6>
-                                        <div className='card-time'>
-                                            <span className='d-block py-2'><i className="fa-regular fa-clock"></i> 02:30-04:30</span>
-                                            <span className='d-block py-2'><i className="fa-solid fa-location-dot"></i> LIVERPOOL</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-3">
-                                <div className="card event-card h-100">
-                                    <div className='event-card-img'>
-                                        <img src={event1} className="card-img-top" alt="..." />
-                                        <div className='event-read-more'>
-                                            <button>Read more</button>
-                                        </div>
-                                    </div>
-                                    <div className="card-body card-event-content">
-                                        <h5 className="card-title py-3"><Link to="" className='card-title-link'>Free Drinks</Link></h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste commodi reiciendis fugit qui quia ut, non omnis dignissimos</p>
-                                    </div>
-                                    <div className="card-event-footer px-3">
-                                        <h6>31 <br /><span>AUG</span></h6>
-                                        <div className='card-time'>
-                                            <span className='d-block py-2'><i className="fa-regular fa-clock"></i> 02:30-20:30</span>
-                                            <span className='d-block py-2'><i className="fa-solid fa-location-dot"></i> PARIS</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-3">
-                                <div className="card event-card h-100">
-                                    <div className='event-card-img'>
-                                        <img src={event2} className="card-img-top" alt="..." />
-                                        <div className='event-read-more'>
-                                            <button>Read more</button>
-                                        </div>
-                                    </div>
-                                    <div className="card-body card-event-content">
-                                        <h5 className="card-title py-3"><Link to="" className='card-title-link'>Live Music</Link></h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste commodi reiciendis fugit qui quia ut, non omnis dignissimos</p>
-                                    </div>
-                                    <div className="card-event-footer px-3">
-                                        <h6>01<br /><span>SEP</span></h6>
-                                        <div className='card-time'>
-                                            <span className='d-block py-2'><i className="fa-regular fa-clock"></i> 16:00-22:30</span>
-                                            <span className='d-block py-2'><i className="fa-solid fa-location-dot"></i> LIVERPOOL</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-3">
-                                <div className="card event-card h-100">
-                                    <div className='event-card-img'>
-                                        <img src={event3} className="card-img-top" alt="..." />
-                                        <div className='event-read-more'>
-                                            <button>Read more</button>
-                                        </div>
-                                    </div>
-                                    <div className="card-body card-event-content">
-                                        <h5 className="card-title py-3"><Link to="" className='card-title-link'>Wine Tastings</Link></h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste commodi reiciendis fugit qui quia ut, non omnis dignissimos</p>
-                                    </div>
-                                    <div className="card-event-footer px-3">
-                                        <h6>20 <br /><span>NOV</span></h6>
-                                        <div className='card-time'>
-                                            <span className='d-block py-2'><i className="fa-regular fa-clock"></i> 02:30-04:30</span>
-                                            <span className='d-block py-2'><i className="fa-solid fa-location-dot"></i> LONDON</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-3">
-                                <div className="card event-card h-100">
-                                    <div className='event-card-img'>
-                                        <img src={event7} className="card-img-top" alt="..." />
-                                        <div className='event-read-more'>
-                                            <button>Read more</button>
-                                        </div>
-                                    </div>
-                                    <div className="card-body card-event-content">
-                                        <h5 className="card-title py-3"><Link to="" className='card-title-link'>Food/Wine Pairings</Link></h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste commodi reiciendis fugit qui quia ut, non omnis dignissimos</p>
-                                    </div>
-                                    <div className="card-event-footer px-3">
-                                        <h6>15 <br /><span>MAR</span></h6>
-                                        <div className='card-time'>
-                                            <span className='d-block py-2'><i className="fa-regular fa-clock"></i> 01:00-23:00</span>
-                                            <span className='d-block py-2'><i className="fa-solid fa-location-dot"></i> PARIS</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-3">
-                                <div className="card event-card h-100">
-                                    <div className='event-card-img'>
-                                        <img src={event8} className="card-img-top" alt="..." />
-                                        <div className='event-read-more'>
-                                            <button>Read more</button>
-                                        </div>
-                                    </div>
-                                    <div className="card-body card-event-content">
-                                        <h5 className="card-title py-3"><Link to="" className='card-title-link'>Live Music</Link></h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste commodi reiciendis fugit qui quia ut, non omnis dignissimos</p>
-                                    </div>
-                                    <div className="card-event-footer px-3">
-                                        <h6>01<br /><span>SEP</span></h6>
-                                        <div className='card-time'>
-                                            <span className='d-block py-2'><i className="fa-regular fa-clock"></i> 16:00-22:30</span>
-                                            <span className='d-block py-2'><i className="fa-solid fa-location-dot"></i> LIVERPOOL</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-3">
-                                <div className="card event-card h-100">
-                                    <div className='event-card-img'>
-                                        <img src={event9} className="card-img-top" alt="..." />
-                                        <div className='event-read-more'>
-                                            <button>Read more</button>
-                                        </div>
-                                    </div>
-                                    <div className="card-body card-event-content">
-                                        <h5 className="card-title py-3"><Link to="" className='card-title-link'>Wine Tastings</Link></h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste commodi reiciendis fugit qui quia ut, non omnis dignissimos</p>
-                                    </div>
-                                    <div className="card-event-footer px-3">
-                                        <h6>20 <br /><span>NOV</span></h6>
-                                        <div className='card-time'>
-                                            <span className='d-block py-2'><i className="fa-regular fa-clock"></i> 02:30-04:30</span>
-                                            <span className='d-block py-2'><i className="fa-solid fa-location-dot"></i> BARCELONA</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                     <div className="col-xl-3 xol-lg-3 col-md-12 col-sm-12">

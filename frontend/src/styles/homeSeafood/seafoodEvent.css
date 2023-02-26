@@ -1,0 +1,152 @@
+#events {
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+}
+
+.seafood-events-header p {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    font-size: 35px;
+}
+
+.events-inner {
+    padding: 50px 0;
+}
+
+.seafood-events-header h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 55px;
+}
+
+.seafood-events-paralax {
+    background-image: url(../../images/seafoodEvent-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item-content {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start !important;
+}
+
+.seafood-inner-event-slider-content h5 {
+    color: #004e99;
+    font-weight: 700;
+}
+
+.seafood-inner-event-slider-content p {
+    color: #666;
+}
+
+
+.seafood-inner-event-slider-content .button {
+    color: #004e99;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.carousel-item-content .button:hover {
+    color: #222;
+}
+
+.inner-slider {
+    padding: 50px 0;
+}
+
+.event-slider-img {
+    width: 40%;
+    height: auto;
+}
+
+
+.seafood-inner-event-slider-content {
+    width: 40%;
+    color: #000;
+    padding: 20px 10px;
+    background-color: #fff;
+}
+
+
+.seafood-inner-date {
+    width: 20%;
+    background-color: #004e99;
+}
+
+.seafood-events-slider-button {
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #999;
+}
+
+.seafood-events-slider-button-active {
+    background-color: #0693e3;
+}
+
+.seafood-inner-date {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.seafood-date-boxs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.seafood-date-box {
+    border: 1px solid #0693e3;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background-color: #0693e3;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222 !important;
+}
+
+.seafood-date-box p {
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+.seafood-date-box p span {
+    display: block;
+    font-size: 15px;
+}
+
+@media(max-width: 992px) {
+    .carousel-item-content {
+        display: block;
+    }
+
+    .event-slider-img {
+        width: 100%;
+    }
+
+    .seafood-inner-event-slider-content {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .seafood-inner-date {
+        width: 100%;
+        padding: 20px 10px;
+    }
+}

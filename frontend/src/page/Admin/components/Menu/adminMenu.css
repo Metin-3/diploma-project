@@ -1,0 +1,83 @@
+#admin-menu {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#admin-menu input {
+    width: 100%;
+    margin: 15px 0;
+    padding: 5px;
+    outline: none;
+    border: 1px solid #999;
+    border-radius: 5px;
+    display: block;
+}
+
+.submit-btn {
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 7px 0;
+    transition: 0.3s;
+    font-weight: 700;
+}
+
+.submit-btn:hover {
+    background-color: #ffb606;
+}
+
+.table-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.table-edit {
+    font-size: 20px;
+    color: blue;
+    background-color: transparent;
+    border: none;
+}
+
+.table-delete {
+    font-size: 20px;
+    color: red;
+    background-color: transparent;
+    border: none;
+}
+
+.td-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media(max-width: 992px) {
+    .td-text {
+        font-size: 10px;
+    }
+
+    .table-img {
+        width: 70px;
+        height: 80px;
+    }
+
+    .table-delete {
+        font-size: 13px;
+    }
+
+    .table-edit {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 768px) {
+    .noActive {
+        display: none;
+    }
+}

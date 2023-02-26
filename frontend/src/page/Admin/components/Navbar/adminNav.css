@@ -1,0 +1,39 @@
+#admin-navbar {
+    width: 100%;
+    background-color: #444;
+}
+
+.admin-close-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: #444;
+}
+
+.admin-navbar-btn {
+    border: none;
+    background-color: transparent;
+    color: #ffb606;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.admin-list {
+    list-style: none;
+}
+
+.admin-list li {
+    border-bottom: 1px solid #999;
+    margin: 20px 0;
+}
+
+.admin-list-link {
+    text-decoration: none;
+    color: #444;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.admin-list-link:hover {
+    color: #ffb606;
+}

@@ -5,6 +5,7 @@ import Header from '../components/Home/Header'
 import Menu from '../components/Home/Menu'
 import New from '../components/Home/New'
 
+
 const Home = () => {
     return (
         <>

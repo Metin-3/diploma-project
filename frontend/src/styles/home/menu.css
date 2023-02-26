@@ -107,26 +107,10 @@
     display: none;
 }
 
-.menu-card {
-    width: 100%;
-    height: 17vh;
-    border: 1px solid #999;
-    border-radius: 7px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-    overflow: hidden;
-}
-
-.menu-img {
-    width: 150px;
-    height: 17vh;
-}
-
-.menu-img img {
-    width: 100%;
-    height: 100%;
+.food-img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
 }
 
 .menu-content {
@@ -181,4 +165,16 @@
         font-size: 13px;
         font-weight: 700;
     }
+
+    .food-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* .menu-img img {
+        width: 50px;
+        height: 50px;
+    } */
+
 }

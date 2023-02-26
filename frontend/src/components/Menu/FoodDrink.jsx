@@ -1,7 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/menu/foodDrink.css';
 
 const FoodDrink = () => {
+
+    //! GET FOODS
+
+    const [foods, setFoods] = useState([]);
+
+    const getFoods = () => {
+        fetch("http://localhost:8080/food")
+            .then(res => res.json())
+            .then(data =>
+                setFoods(data)
+            )
+    }
+
+    useEffect(() => {
+        getFoods()
+    }, [])
+
+
+    //! GET DRINKS
+    const [drinks, setDrinks] = useState([]);
+
+    const getDrinks = () => {
+        fetch("http://localhost:8080/drink")
+            .then(res => res.json())
+            .then(data =>
+                setDrinks(data)
+            )
+    }
+
+    useEffect(() => {
+        getDrinks()
+    }, [])
+
+
     return (
         <section id="food-drink">
             <div className="container">
@@ -13,22 +47,16 @@ const FoodDrink = () => {
                                     <h1 className='header-center'>FOOD</h1>
                                 </div>
                             </div>
-                            <div className="col-12 py-3">
-                                <div className='name-and-price'>
-                                    <h5>QUAIL</h5>
-                                    <div></div>
-                                    <p>9.9</p>
+                            {foods && foods.map(({ _id, foodName, foodContent, foodPrice }) => (
+                                <div key={_id} className="col-12 py-3">
+                                    <div className='name-and-price'>
+                                        <h5>{foodName}</h5>
+                                        <div></div>
+                                        <p>{foodPrice}</p>
+                                    </div>
+                                    <p className='menu-content'>{foodContent}</p>
                                 </div>
-                                <p className='menu-content'>Smoked quail, crispy egg, spelt, girolles, parsley</p>
-                            </div>
-                            <div className="col-12 py-3">
-                                <div className='name-and-price'>
-                                    <h5>SEA TROUT</h5>
-                                    <div></div>
-                                    <p>26.9</p>
-                                </div>
-                                <p className='menu-content'>Roast Trout, English asparagus, Jersey Royals, watercress</p>
-                            </div>
+                            ))}
                         </div>
                     </div>
                     <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
@@ -38,22 +66,16 @@ const FoodDrink = () => {
                                     <h1 className='header-center'>DRINK</h1>
                                 </div>
                             </div>
-                            <div className="col-12 py-3">
-                                <div className='name-and-price'>
-                                    <h5>CHILLED CORN CHOWDER</h5>
-                                    <div></div>
-                                    <p>14</p>
+                            {drinks && drinks.map(({ _id, drinkName, drinkContent, drinkPrice }) => (
+                                <div key={_id} className="col-12 py-3">
+                                    <div className='name-and-price'>
+                                        <h5>{drinkName}</h5>
+                                        <div></div>
+                                        <p>{drinkPrice}</p>
+                                    </div>
+                                    <p className='menu-content'>{drinkContent}</p>
                                 </div>
-                                <p className='menu-content'>Cornmeal fried oyster, caviar, basil oil and corn nuts</p>
-                            </div>
-                            <div className="col-12 py-3">
-                                <div className='name-and-price'>
-                                    <h5>SUMMER MELON SALADT</h5>
-                                    <div></div>
-                                    <p>15</p>
-                                </div>
-                                <p className='menu-content'>Cherry tomato confit, prosciutto, baby arugula and basil oil</p>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>

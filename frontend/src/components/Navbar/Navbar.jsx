@@ -60,10 +60,12 @@ const Navbar = () => {
             <nav className={navbar ? 'navbar-active' : 'nav'}>
                 <div className="container">
                     <div className="row inner-navbar">
-                        <div className="col-xl-6 col-lg-4 col-md-2 col-sm-2 col-6">
-                            <Link to="/"> <img src={logo} alt="" /> </Link>
+                        <div className="col-xl-6 col-lg-4 col-md-2">
+                            <div className='nav-logo'>
+                                <Link to="/"> <img src={logo} alt="" /> </Link>
+                            </div>
                         </div>
-                        <div className="col-xl-6 col-lg-8 col-md-10 col-sm-10 col-6">
+                        <div className="col-xl-6 col-lg-8 col-md-10">
                             <ul className='navbar-list'>
                                 <li className='navbar-list-item'>
                                     <Link to="/" className='navbar-list-item-link'>Home <i className="fa-solid fa-chevron-down"></i></Link>
@@ -77,19 +79,19 @@ const Navbar = () => {
                                         </li>
                                         <hr className='me-3' />
                                         <li className='navbar-list-dropdown-item'>
-                                            <Link to="/" className='navbar-list-dropdown-item-link'>Home Seafood</Link>
+                                            <Link to="homeseafood" className='navbar-list-dropdown-item-link'>Home Seafood</Link>
                                         </li>
                                         <hr className='me-3' />
                                         <li className='navbar-list-dropdown-item'>
-                                            <Link to="/" className='navbar-list-dropdown-item-link'>Home Winery</Link>
+                                            <Link to="homeWinery" className='navbar-list-dropdown-item-link'>Home Winery</Link>
                                         </li>
                                         <hr className='me-3' />
                                         <li className='navbar-list-dropdown-item'>
-                                            <Link to="/" className='navbar-list-dropdown-item-link'>One Page</Link>
+                                            <Link to="homeOne" className='navbar-list-dropdown-item-link'>One Page</Link>
                                         </li>
                                         <hr className='me-3' />
                                         <li className='navbar-list-dropdown-item mb-3'>
-                                            <Link to="/" className='navbar-list-dropdown-item-link'>Home Full Screen Video</Link>
+                                            <Link to="homeVideo" className='navbar-list-dropdown-item-link'>Home Full Screen Video</Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -120,16 +122,16 @@ const Navbar = () => {
                                     <Link to="reservation" className='navbar-list-item-link'>Reservation <i className="fa-solid fa-chevron-down"></i></Link>
                                     <ul className='navbar-list-dropdown'>
                                         <li className='navbar-list-dropdown-item mt-3'>
-                                            <Link to="/" className='navbar-list-dropdown-item-link'>Opentable Form</Link>
+                                            <Link to="reservation" className='navbar-list-dropdown-item-link'>Opentable Form</Link>
                                         </li>
                                         <hr className='me-3' />
                                         <li className='navbar-list-dropdown-item mb-3'>
-                                            <Link to="/" className='navbar-list-dropdown-item-link'>Reservation Form</Link>
+                                            <Link to="reservationForm" className='navbar-list-dropdown-item-link'>Reservation Form</Link>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className='navbar-list-item'>
-                                    <Link to="features" className='navbar-list-item-link'>Features <i className="fa-solid fa-chevron-down"></i></Link>
+                                    <Link to="about" className='navbar-list-item-link'>Features <i className="fa-solid fa-chevron-down"></i></Link>
                                     <ul className='navbar-list-dropdown'>
                                         <li className='navbar-list-dropdown-item mt-3'>
                                             <Link to="about" className='navbar-list-dropdown-item-link'>About Us</Link>
@@ -222,19 +224,19 @@ const Navbar = () => {
                             </li>
                             <hr className='me-3' />
                             <li className='navbar-list-dropdown-item-mobil'>
-                                <Link to="/" className='navbar-list-dropdown-item-link-mobil'>Home Seafood</Link>
+                                <Link to="homeseafood" className='navbar-list-dropdown-item-link-mobil'>Home Seafood</Link>
                             </li>
                             <hr className='me-3' />
                             <li className='navbar-list-dropdown-item-mobil'>
-                                <Link to="/" className='navbar-list-dropdown-item-link-mobil'>Home Winery</Link>
+                                <Link to="homeWinery" className='navbar-list-dropdown-item-link-mobil'>Home Winery</Link>
                             </li>
                             <hr className='me-3' />
                             <li className='navbar-list-dropdown-item-mobil'>
-                                <Link to="/" className='navbar-list-dropdown-item-link-mobil'>One Page</Link>
+                                <Link to="homeOne" className='navbar-list-dropdown-item-link-mobil'>One Page</Link>
                             </li>
                             <hr className='me-3' />
                             <li className='navbar-list-dropdown-item-mobil mb-3'>
-                                <Link to="/" className='navbar-list-dropdown-item-link-mobil'>Home Full Screen Video</Link>
+                                <Link to="homeVideo" className='navbar-list-dropdown-item-link-mobil'>Home Full Screen Video</Link>
                             </li>
                         </ul>
                     </li>
@@ -271,17 +273,17 @@ const Navbar = () => {
                         </div>
                         <ul className={mobilDropdown3 ? 'navbar-list-dropdown-mobil-active' : 'navbar-list-dropdown-mobil'}>
                             <li className='navbar-list-dropdown-item-mobil mt-3'>
-                                <Link to="/" className='navbar-list-dropdown-item-link-mobil'>Opentable Form</Link>
+                                <Link to="reservation" className='navbar-list-dropdown-item-link-mobil'>Opentable Form</Link>
                             </li>
                             <hr className='me-3' />
                             <li className='navbar-list-dropdown-item-mobil mb-3'>
-                                <Link to="/" className='navbar-list-dropdown-item-link-mobil'>Reservation Form</Link>
+                                <Link to="reservationForm" className='navbar-list-dropdown-item-link-mobil'>Reservation Form</Link>
                             </li>
                         </ul>
                     </li>
                     <li className='navbar-list-item-mobil'>
                         <div className='mobil-link-inner'>
-                            <Link to="features" className='navbar-list-item-link-mobil'>Features</Link>
+                            <Link to="about" className='navbar-list-item-link-mobil'>Features</Link>
                             <span onClick={handleDropdown4}><i className="fa-solid fa-chevron-down me-3"></i></span>
                         </div>
                         <ul className={mobilDropdown4 ? 'navbar-list-dropdown-mobil-active' : 'navbar-list-dropdown-mobil'}>

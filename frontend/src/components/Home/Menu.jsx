@@ -1,16 +1,78 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/home/menu.css';
-import menu1 from '../../images/menu1.webp';
-import img from '../../images/hero_slide_1.webp'
 
 const Menu = () => {
 
+    //! TABS
     const [food, setFood] = useState(1);
 
     const handleFood = (index) => {
         setFood(index)
     }
 
+
+    //! GET FOODS
+    const [foods, setFoods] = useState([]);
+
+    const getFoods = () => {
+        fetch("http://localhost:8080/food")
+            .then(res => res.json())
+            .then(data =>
+                setFoods(data)
+            )
+    }
+
+    useEffect(() => {
+        getFoods()
+    }, [])
+
+
+    //! GET DRINKS
+    const [drinks, setDrinks] = useState([]);
+
+    const getDrinks = () => {
+        fetch("http://localhost:8080/drink")
+            .then(res => res.json())
+            .then(data =>
+                setDrinks(data)
+            )
+    }
+
+    useEffect(() => {
+        getDrinks()
+    }, [])
+
+
+    //! GET CHEF
+    const [chefs, setChefs] = useState([]);
+
+    const getChefs = () => {
+        fetch("http://localhost:8080/chef")
+            .then(res => res.json())
+            .then(data =>
+                setChefs(data)
+            )
+    }
+
+    useEffect(() => {
+        getChefs()
+    }, [])
+
+
+    //! GET COCKTAIL
+    const [cocktails, setCocktails] = useState([]);
+
+    const getCocktails = () => {
+        fetch("http://localhost:8080/cocktail")
+            .then(res => res.json())
+            .then(data =>
+                setCocktails(data)
+            )
+    }
+
+    useEffect(() => {
+        getCocktails()
+    }, [])
 
     return (
         <>
@@ -70,144 +132,112 @@ const Menu = () => {
                 <div className={food === 1 ? "inner-menu-card-active" : "inner-menu-card"}>
                     <div className="container">
                         <div className="row justify-content-center">
-                            <div className="col-xl-6 col-lg-10 col-md-12 col-sm-12">
-                                <div className='menu-card'>
-                                    <div className='menu-img'>
-                                        <img src={menu1} alt="" />
-                                    </div>
-                                    <div className='menu-content'>
-                                        <h5>QUAIL</h5>
-                                        <p>Smoked quail, crispy egg, spelt, girolles, parsley</p>
-                                    </div>
-                                    <div className='menu-price'>
-                                        <h6>Price</h6>
-                                        <p>9.9</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className=" col-xl-6 col-lg-10 col-md-12 col-sm-12">
-                                <div className='menu-card'>
-                                    <div className='menu-img'>
-                                        <img src={img} alt="" />
-                                    </div>
-                                    <div className='menu-content'>
-                                        <h5>THE BREAKFAST CLUB</h5>
-                                        <p>Zucchini, basil, Grana Padano, baby spinach, lemon vinaigrette</p>
-                                    </div>
-                                    <div className='menu-price'>
-                                        <h6>Price</h6>
-                                        <p>9.9</p>
+                            {foods && foods.map(({ _id, image, foodName, foodContent, foodPrice }) => (
+                                <div key={_id} className="col-xl-6 col-lg-10 col-md-12 col-sm-12 my-2">
+                                    <div className="card mb-3" >
+                                        <div className="row align-items-center g-0">
+                                            <div className="col-md-2 col-sm-3">
+                                                <img src={image} className="food-img" alt="..." />
+                                            </div>
+                                            <div className="col-md-8 col-sm-9">
+                                                <div className="card-body">
+                                                    <h6 className="card-title">{foodName}</h6>
+                                                    <p className="card-text">{foodContent}</p>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-2 col-sm-12">
+                                                <div className="card-body">
+                                                    <p className="card-text">Price <br /><small className="text-muted">{foodPrice}</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
                 <div className={food === 2 ? "inner-menu-card-active" : "inner-menu-card"}>
                     <div className="container">
                         <div className="row justify-content-center">
-                            <div className="col-xl-6 col-lg-10 col-md-12 col-sm-12">
-                                <div className='menu-card'>
-                                    <div className='menu-img'>
-                                        <img src={img} alt="" />
-                                    </div>
-                                    <div className='menu-content'>
-                                        <h5>QUAIL</h5>
-                                        <p>Smoked quail, crispy egg, spelt, girolles, parsley</p>
-                                    </div>
-                                    <div className='menu-price'>
-                                        <h6>Price</h6>
-                                        <p>9.9</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className=" col-xl-6 col-lg-10 col-md-12 col-sm-12">
-                                <div className='menu-card'>
-                                    <div className='menu-img'>
-                                        <img src={menu1} alt="" />
-                                    </div>
-                                    <div className='menu-content'>
-                                        <h5>QUAIL</h5>
-                                        <p>Smoked quail, crispy egg, spelt, girolles, parsley</p>
-                                    </div>
-                                    <div className='menu-price'>
-                                        <h6>Price</h6>
-                                        <p>9.9</p>
+                            {drinks && drinks.map(({ _id, drinkImage, drinkName, drinkContent, drinkPrice }) => (
+                                <div key={_id} className="col-xl-6 col-lg-10 col-md-12 col-sm-12 my-2">
+                                    <div className="card mb-3" >
+                                        <div className="row align-items-center g-0">
+                                            <div className="col-md-2 col-sm-3">
+                                                <img src={drinkImage} className="food-img" alt="..." />
+                                            </div>
+                                            <div className="col-md-8 col-sm-9">
+                                                <div className="card-body">
+                                                    <h6 className="card-title">{drinkName}</h6>
+                                                    <p className="card-text">{drinkContent}</p>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-2 col-sm-12">
+                                                <div className="card-body">
+                                                    <p className="card-text">Price <br /><small className="text-muted">{drinkPrice}</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
                 <div className={food === 3 ? "inner-menu-card-active" : "inner-menu-card"}>
                     <div className="container">
                         <div className="row justify-content-center">
-                            <div className="col-xl-6 col-lg-10 col-md-12 col-sm-12">
-                                <div className='menu-card'>
-                                    <div className='menu-img'>
-                                        <img src={img} alt="" />
-                                    </div>
-                                    <div className='menu-content'>
-                                        <h5>QUAIL</h5>
-                                        <p>Smoked quail, crispy egg, spelt, girolles, parsley</p>
-                                    </div>
-                                    <div className='menu-price'>
-                                        <h6>Price</h6>
-                                        <p>9.9</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className=" col-xl-6 col-lg-10 col-md-12 col-sm-12">
-                                <div className='menu-card'>
-                                    <div className='menu-img'>
-                                        <img src={menu1} alt="" />
-                                    </div>
-                                    <div className='menu-content'>
-                                        <h5>QUAIL</h5>
-                                        <p>Smoked quail, crispy egg, spelt, girolles, parsley</p>
-                                    </div>
-                                    <div className='menu-price'>
-                                        <h6>Price</h6>
-                                        <p>9.9</p>
+                            {chefs && chefs.map(({ _id, chefImage, chefName, chefContent, chefPrice }) => (
+                                <div key={_id} className="col-xl-6 col-lg-10 col-md-12 col-sm-12 my-2">
+                                    <div className="card mb-3" >
+                                        <div className="row align-items-center g-0">
+                                            <div className="col-md-2 col-sm-3">
+                                                <img src={chefImage} className="food-img" alt="..." />
+                                            </div>
+                                            <div className="col-md-8 col-sm-9">
+                                                <div className="card-body">
+                                                    <h6 className="card-title">{chefName}</h6>
+                                                    <p className="card-text">{chefContent}</p>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-2 col-sm-12">
+                                                <div className="card-body">
+                                                    <p className="card-text">Price <br /><small className="text-muted">{chefPrice}</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
                 <div className={food === 4 ? "inner-menu-card-active" : "inner-menu-card"}>
                     <div className="container">
                         <div className="row justify-content-center">
-                            <div className="col-xl-6 col-lg-10 col-md-12 col-sm-12">
-                                <div className='menu-card'>
-                                    <div className='menu-img'>
-                                        <img src={img} alt="" />
-                                    </div>
-                                    <div className='menu-content'>
-                                        <h5>QUAIL</h5>
-                                        <p>Smoked quail, crispy egg, spelt, girolles, parsley</p>
-                                    </div>
-                                    <div className='menu-price'>
-                                        <h6>Price</h6>
-                                        <p>9.9</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className=" col-xl-6 col-lg-10 col-md-12 col-sm-12">
-                                <div className='menu-card'>
-                                    <div className='menu-img'>
-                                        <img src={menu1} alt="" />
-                                    </div>
-                                    <div className='menu-content'>
-                                        <h5>QUAIL</h5>
-                                        <p>Smoked quail, crispy egg, spelt, girolles, parsley</p>
-                                    </div>
-                                    <div className='menu-price'>
-                                        <h6>Price</h6>
-                                        <p>9.9</p>
+                            {cocktails && cocktails.map(({ _id, cocktailImage, cocktailName, cocktailContent, cocktailPrice }) => (
+                                <div key={_id} className="col-xl-6 col-lg-10 col-md-12 col-sm-12 my-2">
+                                    <div className="card mb-3" >
+                                        <div className="row align-items-center g-0">
+                                            <div className="col-md-2 col-sm-3">
+                                                <img src={cocktailImage} className="food-img" alt="..." />
+                                            </div>
+                                            <div className="col-md-8 col-sm-9">
+                                                <div className="card-body">
+                                                    <h6 className="card-title">{cocktailName}</h6>
+                                                    <p className="card-text">{cocktailContent}</p>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-2 col-sm-12">
+                                                <div className="card-body">
+                                                    <p className="card-text">Price <br /><small className="text-muted">{cocktailPrice}</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>

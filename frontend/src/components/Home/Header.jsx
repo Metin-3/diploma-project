@@ -8,7 +8,7 @@ const Header = () => {
         <>
             <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div className="carousel-inner">
-                    <div className="carousel-item animate__animated animate__pulse active">
+                    <div className="carousel-item  animate__animated animate__pulse active">
                         <img src={slide1} className="d-block w-100" alt="slide" />
                         <div className='slide-content'>
                             <h2>Resca</h2>
@@ -32,10 +32,10 @@ const Header = () => {
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                    <i class="fa-solid fa-arrow-left-long slide-next-prev-btn"></i>
+                    <i className="fa-solid fa-arrow-left-long slide-next-prev-btn"></i>
                 </button>
                 <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                    <i class="fa-solid fa-arrow-right-long slide-next-prev-btn"></i>
+                    <i className="fa-solid fa-arrow-right-long slide-next-prev-btn"></i>
                 </button>
             </div>
         </>

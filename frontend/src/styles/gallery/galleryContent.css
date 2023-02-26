@@ -44,7 +44,7 @@
     overflow: hidden;
 }
 
-.gallery-content-img img {
+.gallery-content-img .img {
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -56,7 +56,7 @@
         height: 200px;
     }
 
-    .gallery-content-img img {
+    .gallery-content-img .img {
         width: 100%;
         height: 200px;
         object-fit: cover;
@@ -68,7 +68,7 @@
         height: 300px;
     }
 
-    .gallery-content-img img {
+    .gallery-content-img .img {
         width: 100%;
         height: 300px;
         object-fit: cover;
@@ -77,7 +77,7 @@
 
 .gallery-content-img-btn {
     position: absolute;
-    top: 50%;
+    bottom: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -93,11 +93,13 @@
     transform: scale(1);
 }
 
-.gallery-content-img:hover .gallery-img {
+.gallery-content-img:hover .imgg {
     filter: brightness(40%);
 }
 
-.gallery-img {
+.imgg {
+    width: 100%;
+    transition: 0.4s;
     animation: zoomIn;
     animation-duration: 1s;
 }

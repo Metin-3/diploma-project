@@ -1,0 +1,106 @@
+#seafood-menu {
+    padding: 50px 0;
+    width: 100%;
+}
+
+
+.winery-menu-header {
+    text-align: center;
+}
+
+.winery-menu-header h2 {
+    font-family: 'Pacifico', cursive;
+    color: #cea567;
+    font-size: 35px;
+}
+
+.winery-menu-header h1 {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 50px;
+    color: #333;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.winery-menu-header h1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 70px;
+    height: 2px;
+    background-color: #cea567;
+}
+
+.winery-menu-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 70px;
+    height: 2px;
+    background-color: #cea567;
+}
+
+
+.winery-menu-card-img {
+    /* width: 300px; */
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.winery-menu-card-img img {
+    transform: scale(0.7);
+    transition: 0.4s;
+}
+
+.winery-menu-card-img:hover img {
+    transform: scale(0.8);
+}
+
+.winery-menu-card-content {
+    text-align: center;
+}
+
+.winery-menu-card-content h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    padding: 20px 0;
+    font-size: 17px;
+}
+
+.winery-menu-card-content p {
+    color: #999;
+}
+
+.winery-menu-card-content button {
+    margin: 20px 0;
+    padding: 8px 20px;
+    border: 1px solid #d0d0d0;
+    color: #cea567;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.winery-menu-card-content button:hover {
+    border-color: #cea567;
+    background-color: #cea567;
+    color: #fff;
+}
+
+@media(max-width: 768px) {
+
+    .winery-menu-header h2 {
+        font-size: 20px;
+    }
+
+    .winery-menu-header h1 {
+        font-size: 30px;
+    }
+}
