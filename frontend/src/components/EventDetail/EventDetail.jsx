@@ -31,6 +31,7 @@ const EventDetail = () => {
         getEvents()
     })
 
+
     return (
         <section id='event-content'>
             <div className="container">

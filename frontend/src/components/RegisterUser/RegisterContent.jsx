@@ -36,10 +36,12 @@ const RegisterContent = () => {
                                     <input type="checkbox" id='remember' />
                                     <label htmlFor="remember">Remember me</label>
                                 </div>
-                                <button>RGISTER</button>
+                                <Link to="../login">
+                                <button>REGISTER</button>
+                                </Link>
                             </form>
                             <div>
-                                <Link className='login-register-link' to="login">Login</Link>
+                                <Link className='login-register-link' to="../login">Login</Link>
                             </div>
                         </div>
                     </div>

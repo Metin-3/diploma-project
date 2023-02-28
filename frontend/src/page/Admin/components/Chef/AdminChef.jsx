@@ -79,6 +79,12 @@ const AdminChef = () => {
         getChefs()
     }
 
+    //! FILTER
+    const [value, setValue] = useState("")
+    const handleFilter = (e) => {
+        setValue(e.target.value)
+    }
+
     return (
         <section id="admin-menu">
             <div className="container">
@@ -117,6 +123,11 @@ const AdminChef = () => {
                         </form>
                     </div>
                     <div className="col-12 my-5">
+                        <div className='admin-filter'>
+                            <div className='admin-filter-input'>
+                                <input type="text" placeholder='Search product' className='w-75' onChange={handleFilter} />
+                            </div>
+                        </div>
                         <table className="table table-hover align-middle">
                             <thead className='table-dark'>
                                 <tr className='row'>
@@ -129,7 +140,9 @@ const AdminChef = () => {
                                 </tr>
                             </thead>
                             <tbody className='table-responsive'>
-                                {chefs && chefs.map((chef) => (
+                                {chefs && chefs.filter((chef) => {
+                                    return value.trim().toLowerCase() === "" ? chef : chef.chefName.toLowerCase().includes(value.toLowerCase())
+                                }).map((chef) => (
                                     <tr className='row' key={chef._id}>
                                         <td className='col-lg-2 col-md-2 col-sm-3 col-xs-3 col-3'> <img src={chef.chefImage} className="table-img" alt="" /></td>
                                         <td className='col-lg-2 col-md-2 col-sm-3 col-xs-3 col-3 td-text'>{chef.chefName}</td>

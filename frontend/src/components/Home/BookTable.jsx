@@ -13,7 +13,7 @@ const BookTable = () => {
                         </div>
                     </div>
                     <div className="col-12">
-                        <p className='table-content'>Opening Hour <span>8:00</span> AM - <span>10:00</span> PM, every day on week.</p>
+                        <p className='table-content text-dark'>Opening Hour <span>8:00</span> AM - <span>10:00</span> PM, every day on week.</p>
                     </div>
                     <div className="col-sm-12 col-md-4 col-lg-3 my-2">
                         <div>

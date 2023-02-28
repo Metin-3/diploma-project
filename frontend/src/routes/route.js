@@ -35,15 +35,21 @@ import HomeWinery from "../page/HomeWinery";
 import LeftSidebar from "../page/LeftSidebar";
 import LoginUser from "../page/LoginUser";
 import Menu from "../page/Menu";
+import NotFound from "../page/NotFound";
 import RegisterUser from "../page/RegisterUser";
 import Reservation from "../page/Reservation";
 import ReservationForm from "../page/ReservationForm";
 import RightSidebar from "../page/RightSidebar";
 import Shop from "../page/Shop";
+import ShopDetail from "../page/ShopDetail";
 
 
 
 const ROUTES = [
+    {
+        path: "*",
+        element: <NotFound />
+    },
     {
         path: "/",
         element: <MainRoot />,
@@ -123,6 +129,10 @@ const ROUTES = [
             {
                 path: "shop",
                 element: <Shop />
+            },
+            {
+                path: "shop/:id",
+                element: <ShopDetail />
             },
             {
                 path: "blog",

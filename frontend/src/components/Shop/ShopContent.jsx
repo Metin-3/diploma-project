@@ -125,18 +125,20 @@ const ShopContent = () => {
                         <div className={food === 1 ? 'shop-category-active' : 'shop-category'}>
                             <div className="row">
                                 {bars && bars.map((bar) => (
-                                    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                                    <div key={bar._id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
                                         <div className='shop-card-inner'>
                                             <div className='shop-card-img-icon'>
                                                 <div className='shop-card-img'>
                                                     <img src={bar.shopImage} alt="" />
                                                 </div>
-                                                <div className='shop-card-icon'>
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                                </div>
+                                                <Link to={`${bar._id}`}>
+                                                    <div className='shop-card-icon'>
+                                                        <i className="fa-solid fa-magnifying-glass"></i>
+                                                    </div>
+                                                </Link>
                                             </div>
                                             <div className='shop-card-content'>
-                                                <Link to="/" className='shop-card-content-link'>{bar.shopName}</Link>
+                                                <Link to={`${bar._id}`} className='shop-card-content-link'>{bar.shopName}</Link>
                                                 <p>${bar.shopPrice}</p>
                                                 <button className='add-to-cart-icon'><i className="fa-solid fa-cart-shopping"></i></button>
                                                 <button className='add-to-cart'>ADD TO CART</button>
@@ -145,18 +147,18 @@ const ShopContent = () => {
                                     </div>
                                 ))}
                                 {bakerys && bakerys.map((bakery) => (
-                                    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                                    <div key={bakery._id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
                                         <div className='shop-card-inner'>
                                             <div className='shop-card-img-icon'>
                                                 <div className='shop-card-img'>
                                                     <img src={bakery.bakeryImage} alt="" />
                                                 </div>
                                                 <div className='shop-card-icon'>
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <i className="fa-solid fa-magnifying-glass"></i>
                                                 </div>
                                             </div>
                                             <div className='shop-card-content'>
-                                                <Link to="/" className='shop-card-content-link'>{bakery.bakeryName}</Link>
+                                                <Link to="" className='shop-card-content-link'>{bakery.bakeryName}</Link>
                                                 <p>${bakery.bakeryPrice}</p>
                                                 <button className='add-to-cart-icon'><i className="fa-solid fa-cart-shopping"></i></button>
                                                 <button className='add-to-cart'>ADD TO CART</button>
@@ -165,18 +167,18 @@ const ShopContent = () => {
                                     </div>
                                 ))}
                                 {churras && churras.map((churra) => (
-                                    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                                    <div key={churra._id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
                                         <div className='shop-card-inner'>
                                             <div className='shop-card-img-icon'>
                                                 <div className='shop-card-img'>
                                                     <img src={churra.churraImage} alt="" />
                                                 </div>
                                                 <div className='shop-card-icon'>
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <i className="fa-solid fa-magnifying-glass"></i>
                                                 </div>
                                             </div>
                                             <div className='shop-card-content'>
-                                                <Link to="/" className='shop-card-content-link'>{churra.churraName}</Link>
+                                                <Link to="" className='shop-card-content-link'>{churra.churraName}</Link>
                                                 <p>${churra.churraPrice}</p>
                                                 <button className='add-to-cart-icon'><i className="fa-solid fa-cart-shopping"></i></button>
                                                 <button className='add-to-cart'>ADD TO CART</button>
@@ -185,18 +187,18 @@ const ShopContent = () => {
                                     </div>
                                 ))}
                                 {booths && booths.map((booth) => (
-                                    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                                    <div key={booth._id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
                                         <div className='shop-card-inner'>
                                             <div className='shop-card-img-icon'>
                                                 <div className='shop-card-img'>
                                                     <img src={booth.boothImage} alt="" />
                                                 </div>
                                                 <div className='shop-card-icon'>
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <i className="fa-solid fa-magnifying-glass"></i>
                                                 </div>
                                             </div>
                                             <div className='shop-card-content'>
-                                                <Link to="/" className='shop-card-content-link'>{booth.boothName}</Link>
+                                                <Link to="" className='shop-card-content-link'>{booth.boothName}</Link>
                                                 <p>${booth.boothPrice}</p>
                                                 <button className='add-to-cart-icon'><i className="fa-solid fa-cart-shopping"></i></button>
                                                 <button className='add-to-cart'>ADD TO CART</button>
@@ -205,18 +207,18 @@ const ShopContent = () => {
                                     </div>
                                 ))}
                                 {carts && carts.map((cart) => (
-                                    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                                    <div key={cart._id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
                                         <div className='shop-card-inner'>
                                             <div className='shop-card-img-icon'>
                                                 <div className='shop-card-img'>
                                                     <img src={cart.cartImage} alt="" />
                                                 </div>
                                                 <div className='shop-card-icon'>
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <i className="fa-solid fa-magnifying-glass"></i>
                                                 </div>
                                             </div>
                                             <div className='shop-card-content'>
-                                                <Link to="/" className='shop-card-content-link'>{cart.cartName}</Link>
+                                                <Link to="" className='shop-card-content-link'>{cart.cartName}</Link>
                                                 <p>${cart.cartPrice}</p>
                                                 <button className='add-to-cart-icon'><i className="fa-solid fa-cart-shopping"></i></button>
                                                 <button className='add-to-cart'>ADD TO CART</button>
@@ -225,18 +227,18 @@ const ShopContent = () => {
                                     </div>
                                 ))}
                                 {restaurants && restaurants.map((restaurant) => (
-                                    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                                    <div key={restaurant._id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
                                         <div className='shop-card-inner'>
                                             <div className='shop-card-img-icon'>
                                                 <div className='shop-card-img'>
                                                     <img src={restaurant.restaurantImage} alt="" />
                                                 </div>
                                                 <div className='shop-card-icon'>
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <i className="fa-solid fa-magnifying-glass"></i>
                                                 </div>
                                             </div>
                                             <div className='shop-card-content'>
-                                                <Link to="/" className='shop-card-content-link'>{restaurant.restaurantName}</Link>
+                                                <Link to="" className='shop-card-content-link'>{restaurant.restaurantName}</Link>
                                                 <p>${restaurant.restaurantPrice}</p>
                                                 <button className='add-to-cart-icon'><i className="fa-solid fa-cart-shopping"></i></button>
                                                 <button className='add-to-cart'>ADD TO CART</button>
@@ -249,23 +251,20 @@ const ShopContent = () => {
                         <div className={food === 2 ? 'shop-category-active' : 'shop-category'}>
                             <div className="row">
                                 {bars && bars.map((bar) => (
-                                    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                                    <div key={bar._id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
                                         <div className='shop-card-inner'>
                                             <div className='shop-card-img-icon'>
                                                 <div className='shop-card-img'>
-                                                    {/* <ModalImage
-                                                        className="shop-card-imgg"
-                                                        small={bar.shopImage}
-                                                        large={bar.shopImage}
-                                                    /> */}
                                                     <img src={bar.shopImage} alt="" />
                                                 </div>
-                                                <div className='shop-card-icon'>
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                                </div>
+                                                <Link to={`${bar._id}`}>
+                                                    <div className='shop-card-icon'>
+                                                        <i className="fa-solid fa-magnifying-glass"></i>
+                                                    </div>
+                                                </Link>
                                             </div>
                                             <div className='shop-card-content'>
-                                                <Link to="/" className='shop-card-content-link'>{bar.shopName}</Link>
+                                                <Link to={`${bar._id}`} className='shop-card-content-link'>{bar.shopName}</Link>
                                                 <p>${bar.shopPrice}</p>
                                                 <button className='add-to-cart-icon'><i className="fa-solid fa-cart-shopping"></i></button>
                                                 <button className='add-to-cart'>ADD TO CART</button>
@@ -278,18 +277,18 @@ const ShopContent = () => {
                         <div className={food === 3 ? 'shop-category-active' : 'shop-category'}>
                             <div className="row">
                                 {bakerys && bakerys.map((bakery) => (
-                                    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                                    <div key={bakery._id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
                                         <div className='shop-card-inner'>
                                             <div className='shop-card-img-icon'>
                                                 <div className='shop-card-img'>
                                                     <img src={bakery.bakeryImage} alt="" />
                                                 </div>
                                                 <div className='shop-card-icon'>
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <i className="fa-solid fa-magnifying-glass"></i>
                                                 </div>
                                             </div>
                                             <div className='shop-card-content'>
-                                                <Link to="/" className='shop-card-content-link'>{bakery.bakeryName}</Link>
+                                                <Link to="" className='shop-card-content-link'>{bakery.bakeryName}</Link>
                                                 <p>${bakery.bakeryPrice}</p>
                                                 <button className='add-to-cart-icon'><i className="fa-solid fa-cart-shopping"></i></button>
                                                 <button className='add-to-cart'>ADD TO CART</button>
@@ -302,18 +301,18 @@ const ShopContent = () => {
                         <div className={food === 4 ? 'shop-category-active' : 'shop-category'}>
                             <div className="row">
                                 {churras && churras.map((churra) => (
-                                    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                                    <div key={churra._id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
                                         <div className='shop-card-inner'>
                                             <div className='shop-card-img-icon'>
                                                 <div className='shop-card-img'>
                                                     <img src={churra.churraImage} alt="" />
                                                 </div>
                                                 <div className='shop-card-icon'>
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <i className="fa-solid fa-magnifying-glass"></i>
                                                 </div>
                                             </div>
                                             <div className='shop-card-content'>
-                                                <Link to="/" className='shop-card-content-link'>{churra.churraName}</Link>
+                                                <Link to="" className='shop-card-content-link'>{churra.churraName}</Link>
                                                 <p>${churra.churraPrice}</p>
                                                 <button className='add-to-cart-icon'><i className="fa-solid fa-cart-shopping"></i></button>
                                                 <button className='add-to-cart'>ADD TO CART</button>
@@ -326,18 +325,18 @@ const ShopContent = () => {
                         <div className={food === 5 ? 'shop-category-active' : 'shop-category'}>
                             <div className="row">
                                 {booths && booths.map((booth) => (
-                                    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                                    <div key={booth._id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
                                         <div className='shop-card-inner'>
                                             <div className='shop-card-img-icon'>
                                                 <div className='shop-card-img'>
                                                     <img src={booth.boothImage} alt="" />
                                                 </div>
                                                 <div className='shop-card-icon'>
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <i className="fa-solid fa-magnifying-glass"></i>
                                                 </div>
                                             </div>
                                             <div className='shop-card-content'>
-                                                <Link to="/" className='shop-card-content-link'>{booth.boothName}</Link>
+                                                <Link to="" className='shop-card-content-link'>{booth.boothName}</Link>
                                                 <p>${booth.boothPrice}</p>
                                                 <button className='add-to-cart-icon'><i className="fa-solid fa-cart-shopping"></i></button>
                                                 <button className='add-to-cart'>ADD TO CART</button>
@@ -350,18 +349,18 @@ const ShopContent = () => {
                         <div className={food === 6 ? 'shop-category-active' : 'shop-category'}>
                             <div className="row">
                                 {carts && carts.map((cart) => (
-                                    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                                    <div key={cart._id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
                                         <div className='shop-card-inner'>
                                             <div className='shop-card-img-icon'>
                                                 <div className='shop-card-img'>
                                                     <img src={cart.cartImage} alt="" />
                                                 </div>
                                                 <div className='shop-card-icon'>
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <i className="fa-solid fa-magnifying-glass"></i>
                                                 </div>
                                             </div>
                                             <div className='shop-card-content'>
-                                                <Link to="/" className='shop-card-content-link'>{cart.cartName}</Link>
+                                                <Link to="" className='shop-card-content-link'>{cart.cartName}</Link>
                                                 <p>${cart.cartPrice}</p>
                                                 <button className='add-to-cart-icon'><i className="fa-solid fa-cart-shopping"></i></button>
                                                 <button className='add-to-cart'>ADD TO CART</button>
@@ -374,18 +373,18 @@ const ShopContent = () => {
                         <div className={food === 7 ? 'shop-category-active' : 'shop-category'}>
                             <div className="row">
                                 {restaurants && restaurants.map((restaurant) => (
-                                    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                                    <div key={restaurant._id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
                                         <div className='shop-card-inner'>
                                             <div className='shop-card-img-icon'>
                                                 <div className='shop-card-img'>
                                                     <img src={restaurant.restaurantImage} alt="" />
                                                 </div>
                                                 <div className='shop-card-icon'>
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <i className="fa-solid fa-magnifying-glass"></i>
                                                 </div>
                                             </div>
                                             <div className='shop-card-content'>
-                                                <Link to="/" className='shop-card-content-link'>{restaurant.restaurantName}</Link>
+                                                <Link to="" className='shop-card-content-link'>{restaurant.restaurantName}</Link>
                                                 <p>${restaurant.restaurantPrice}</p>
                                                 <button className='add-to-cart-icon'><i className="fa-solid fa-cart-shopping"></i></button>
                                                 <button className='add-to-cart'>ADD TO CART</button>

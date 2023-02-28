@@ -34,7 +34,7 @@ const Coming = () => {
     setInterval(updateHours, 1);
     return (
         <section id="coming">
-            <video src='https://resca.thimpress.com/wp-content/uploads/2015/07/video11.mp4' preload='auto' loop="loop" muted="muted" autoPlay="true">
+            <video src='https://resca.thimpress.com/wp-content/uploads/2015/07/video11.mp4' preload='auto' loop="loop" muted="muted" autoPlay>
             </video>
             <div className='coming-content'>
                 <div>

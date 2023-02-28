@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import BookTable from '../components/Home/BookTable'
 import Events from '../components/Home/Events'
 import Header from '../components/Home/Header'
@@ -7,6 +7,15 @@ import New from '../components/Home/New'
 
 
 const Home = () => {
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        })
+    }, [])
+
     return (
         <>
             <Header />

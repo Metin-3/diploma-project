@@ -1,4 +1,4 @@
-const Message = require('../models/restaurantModel');
+const Message = require('../models/messageModel');
 
 
 //! GET

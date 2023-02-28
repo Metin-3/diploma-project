@@ -33,10 +33,12 @@ const LoginContent = () => {
                                     <input type="checkbox" id='remember' />
                                     <label htmlFor="remember">Remember me</label>
                                 </div>
-                                <button>LOGIN</button>
+                                <Link to="/admin">
+                                    <button>LOGIN</button>
+                                </Link>
                             </form>
                             <div>
-                                <Link className='login-register-link' to="register">Register</Link>
+                                <Link className='login-register-link' to="../register">Register</Link>
                             </div>
                         </div>
                     </div>

@@ -79,6 +79,13 @@ const AdminMenu = () => {
         await axios.delete(`http://localhost:8080/food/${id}`)
         getFoods()
     }
+
+    //! FILTER
+    const [value, setValue] = useState("")
+    const handleFilter = (e) => {
+        setValue(e.target.value)
+    }
+
     return (
         <section id="admin-menu">
             <div className="container">
@@ -117,6 +124,11 @@ const AdminMenu = () => {
                         </form>
                     </div>
                     <div className="col-12 my-5">
+                        <div className='admin-filter'>
+                            <div className='admin-filter-input'>
+                                <input type="text" placeholder='Search product' className='w-75' onChange={handleFilter} />
+                            </div>
+                        </div>
                         <table className="table table-hover align-middle">
                             <thead className='table-dark'>
                                 <tr className='row'>
@@ -129,7 +141,9 @@ const AdminMenu = () => {
                                 </tr>
                             </thead>
                             <tbody className='table-responsive'>
-                                {foods && foods.map((food) => (
+                                {foods && foods.filter((food) => {
+                                    return value.trim().toLowerCase() === "" ? food : food.foodName.toLowerCase().includes(value.toLowerCase())
+                                }).map((food) => (
                                     <tr className='row' key={food._id}>
                                         <td className='col-lg-2 col-md-2 col-sm-3 col-xs-3 col-3'> <img src={food.image} className="table-img" alt="" /></td>
                                         <td className='col-lg-2 col-md-2 col-sm-3 col-xs-3 col-3 td-text'>{food.foodName}</td>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import SeafoodEvent from '../components/HomeSeafood/SeafoodEvent'
 import SeafoodGoToTop from '../components/HomeSeafood/SeafoodGoToTop'
 import SeafoodHeader from '../components/HomeSeafood/SeafoodHeader'
@@ -8,6 +8,15 @@ import SeafoodStory from '../components/HomeSeafood/SeafoodStory'
 import SeafoodTable from '../components/HomeSeafood/SeafoodTable'
 
 const HomeSeafood = () => {
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        })
+    }, [])
+
     return (
         <>
             <SeafoodHeader />

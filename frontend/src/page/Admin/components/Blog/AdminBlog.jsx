@@ -132,7 +132,11 @@ const AdminBlog = () => {
                         </form>
                     </div> <br />
                     <div className="col-12 my-5">
-                        <input type="text" placeholder='Search product' className='w-50' onChange={handleFilter} />
+                        <div className='admin-filter'>
+                            <div className='admin-filter-input'>
+                                <input type="text" placeholder='Search product' className='w-75' onChange={handleFilter} />
+                            </div>
+                        </div>
                         <div className='table-responsive'>
                             <table className="table table-hover align-middle">
                                 <thead className='table-dark'>

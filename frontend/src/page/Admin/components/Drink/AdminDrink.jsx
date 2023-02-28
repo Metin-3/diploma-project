@@ -80,6 +80,12 @@ const AdminDrink = () => {
         getDrinks()
     }
 
+    //! FILTER
+    const [value, setValue] = useState("")
+    const handleFilter = (e) => {
+        setValue(e.target.value)
+    }
+
     return (
         <section id="admin-menu">
             <div className="container">
@@ -118,6 +124,11 @@ const AdminDrink = () => {
                         </form>
                     </div>
                     <div className="col-12 my-5">
+                        <div className='admin-filter'>
+                            <div className='admin-filter-input'>
+                                <input type="text" placeholder='Search product' className='w-75' onChange={handleFilter} />
+                            </div>
+                        </div>
                         <table className="table table-hover align-middle">
                             <thead className='table-dark'>
                                 <tr className='row'>
@@ -130,7 +141,9 @@ const AdminDrink = () => {
                                 </tr>
                             </thead>
                             <tbody className='table-responsive'>
-                                {drinks && drinks.map((drink) => (
+                                {drinks && drinks.filter((drink) => {
+                                    return value.trim().toLowerCase() === "" ? drink : drink.drinkName.toLowerCase().includes(value.toLowerCase())
+                                }).map((drink) => (
                                     <tr className='row' key={drink._id}>
                                         <td className='col-lg-2 col-md-2 col-sm-3 col-xs-3 col-3'> <img src={drink.drinkImage} className="table-img" alt="" /></td>
                                         <td className='col-lg-2 col-md-2 col-sm-3 col-xs-3 col-3 td-text'>{drink.drinkName}</td>

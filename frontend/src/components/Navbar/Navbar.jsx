@@ -10,6 +10,12 @@ import { useState } from 'react';
 const Navbar = () => {
 
 
+    const [nav, setNav] = useState(1);
+
+    const handleNav = (index) => {
+        setNav(index)
+    }
+
     //!============= scrol navbar =================
     const [navbar, setNavbar] = useState(false);
 
@@ -68,7 +74,7 @@ const Navbar = () => {
                         <div className="col-xl-6 col-lg-8 col-md-10">
                             <ul className='navbar-list'>
                                 <li className='navbar-list-item'>
-                                    <Link to="/" className='navbar-list-item-link'>Home <i className="fa-solid fa-chevron-down"></i></Link>
+                                    <Link to="/" className={nav === 1 ? "navbar-list-item-link-active" : "navbar-list-item-link"} onClick={() => handleNav(1)}>Home <i className="fa-solid fa-chevron-down"></i></Link>
                                     <ul className='navbar-list-dropdown'>
                                         <li className='navbar-list-dropdown-item mt-3'>
                                             <Link to="/" className='navbar-list-dropdown-item-link'>Home Restaurant</Link>
@@ -96,10 +102,10 @@ const Navbar = () => {
                                     </ul>
                                 </li>
                                 <li className='navbar-list-item'>
-                                    <Link to="menu" className='navbar-list-item-link'>Menu</Link>
+                                    <Link to="menu" className={nav === 2 ? "navbar-list-item-link-active" : "navbar-list-item-link"} onClick={() => handleNav(2)}>Menu</Link>
                                 </li>
                                 <li className='navbar-list-item'>
-                                    <Link to="events" className='navbar-list-item-link'>Events <i className="fa-solid fa-chevron-down"></i></Link>
+                                    <Link to="events" className={nav === 3 ? "navbar-list-item-link-active" : "navbar-list-item-link"} onClick={() => handleNav(3)}>Events <i className="fa-solid fa-chevron-down"></i></Link>
                                     <ul className='navbar-list-dropdown'>
                                         <li className='navbar-list-dropdown-item mt-3'>
                                             <Link to="/" className='navbar-list-dropdown-item-link'>Happening Events</Link>
@@ -119,7 +125,7 @@ const Navbar = () => {
                                     </ul>
                                 </li>
                                 <li className='navbar-list-item'>
-                                    <Link to="reservation" className='navbar-list-item-link'>Reservation <i className="fa-solid fa-chevron-down"></i></Link>
+                                    <Link to="reservation" className={nav === 4 ? "navbar-list-item-link-active" : "navbar-list-item-link"} onClick={() => handleNav(4)}>Reservation <i className="fa-solid fa-chevron-down"></i></Link>
                                     <ul className='navbar-list-dropdown'>
                                         <li className='navbar-list-dropdown-item mt-3'>
                                             <Link to="reservation" className='navbar-list-dropdown-item-link'>Opentable Form</Link>
@@ -131,7 +137,7 @@ const Navbar = () => {
                                     </ul>
                                 </li>
                                 <li className='navbar-list-item'>
-                                    <Link to="about" className='navbar-list-item-link'>Features <i className="fa-solid fa-chevron-down"></i></Link>
+                                    <Link to="about" className={nav === 5 ? "navbar-list-item-link-active" : "navbar-list-item-link"} onClick={() => handleNav(5)}>Features <i className="fa-solid fa-chevron-down"></i></Link>
                                     <ul className='navbar-list-dropdown'>
                                         <li className='navbar-list-dropdown-item mt-3'>
                                             <Link to="about" className='navbar-list-dropdown-item-link'>About Us</Link>
@@ -159,20 +165,20 @@ const Navbar = () => {
                                     </ul>
                                 </li>
                                 <li className='navbar-list-item'>
-                                    <Link to="shop" className='navbar-list-item-link'>Shop</Link>
+                                    <Link to="shop" className={nav === 6 ? "navbar-list-item-link-active" : "navbar-list-item-link"} onClick={() => handleNav(6)}>Shop</Link>
                                 </li>
                                 <li className='navbar-list-item'>
-                                    <Link to="blog" className='navbar-list-item-link'>Blog</Link>
+                                    <Link to="blog" className={nav === 7 ? "navbar-list-item-link-active" : "navbar-list-item-link"} onClick={() => handleNav(7)}>Blog</Link>
                                 </li>
                                 <li className='vr'></li>
                                 <li className='navbar-list-item'>
-                                    <Link to="/" className='navbar-list-item-link fs-6'><GrFacebookOption /></Link>
+                                    <Link to="https://www.facebook.com/" className='navbar-list-item-link fs-6'><GrFacebookOption /></Link>
                                 </li>
                                 <li className='navbar-list-item'>
-                                    <Link to="/" className='navbar-list-item-link fs-6'><AiOutlineTwitter /></Link>
+                                    <Link to="https://twitter.com/?lang=en" className='navbar-list-item-link fs-6'><AiOutlineTwitter /></Link>
                                 </li>
                                 <li className='navbar-list-item'>
-                                    <Link to="/" className='navbar-list-item-link fs-6'><FaTripadvisor /></Link>
+                                    <Link to="https://www.tripadvisor.com.au/Restaurant_Review-g4003760-d2477675-Reviews-Trattoria_La_Resca-Vescovato_Province_of_Cremona_Lombardy.html" className='navbar-list-item-link fs-6'><FaTripadvisor /></Link>
                                 </li>
                             </ul>
                         </div>
@@ -196,13 +202,13 @@ const Navbar = () => {
                     <div className='d-flex justify-content-between'>
                         <div className='d-flex'>
                             <li className='navbar-list-item-mobil mx-2'>
-                                <Link to="/" className='navbar-list-item-link-mobil fs-6'><GrFacebookOption /></Link>
+                                <Link to="https://www.facebook.com/" className='navbar-list-item-link-mobil fs-6'><GrFacebookOption /></Link>
                             </li>
                             <li className='navbar-list-item-mobil mx-2'>
-                                <Link to="/" className='navbar-list-item-link-mobil fs-6'><AiOutlineTwitter /></Link>
+                                <Link to="https://twitter.com/?lang=en" className='navbar-list-item-link-mobil fs-6'><AiOutlineTwitter /></Link>
                             </li>
                             <li className='navbar-list-item-mobil mx-2'>
-                                <Link to="/" className='navbar-list-item-link-mobil fs-6'><FaTripadvisor /></Link>
+                                <Link to="https://www.tripadvisor.com.au/Restaurant_Review-g4003760-d2477675-Reviews-Trattoria_La_Resca-Vescovato_Province_of_Cremona_Lombardy.html" className='navbar-list-item-link-mobil fs-6'><FaTripadvisor /></Link>
                             </li>
                         </div>
                         <div className='close-btn me-3'>

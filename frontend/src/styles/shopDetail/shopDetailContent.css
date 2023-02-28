@@ -1,0 +1,123 @@
+#shop-detail {
+    padding: 50px 0;
+}
+
+.shop-detail-content-img {
+    height: 400px;
+}
+
+.shop-detail-content-imgg {
+    height: 150px;
+}
+
+.shop-detail-content-imgg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop-detail-content-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop-detail-content h2 {
+    font-family: 'Yantramanav', sans-serif;
+}
+
+.shop-detail-content h4 {
+    color: #ffb606;
+    margin: 25px 0;
+}
+
+.shop-detail-content p {
+    color: #666;
+}
+
+.shop-detail-content input {
+    width: 70px;
+    height: 40px;
+    border: 1px solid #c1c0c0;
+    outline: none;
+    padding: 10px 10px;
+    margin-right: 5px;
+}
+
+.shop-detail-content .detail-add-to-cart {
+    padding: 8px 20px;
+    border: none;
+    background-color: #000;
+    transition: 0.4s;
+}
+
+.shop-detail-content .detail-add-to-cart:hover {
+    background-color: #ffb606;
+}
+
+.shop-detail-content-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+.shop-detail-content .detail-add-to-cart:hover .shop-detail-content-link {
+    color: #000;
+}
+
+.shop-detail-content-icons button {
+    border: none;
+    background-color: transparent;
+}
+
+.shop-detail-content-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.shop-detail-content-icon i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.shop-detail-content-icon:hover {
+    color: #fff;
+    opacity: 0.5;
+}
+
+.shop-detail-content-icon-facebook {
+    background-color: #3b5999;
+}
+
+.shop-detail-content-icon-twitter {
+    background-color: #61cae7;
+}
+
+.shop-detail-content-icon-pinterest {
+    background-color: #d4232b;
+}
+
+.shop-detail-content-icon-google {
+    background-color: #f35633;
+}
+
+@media(max-width: 768px) {
+    .shop-detail-content-img {
+        height: 200px;
+    }
+
+    .shop-detail-content-imgg {
+        height: 100px;
+    }
+}

@@ -1,6 +1,7 @@
 #admin-navbar {
     width: 100%;
     background-color: #444;
+    position: fixed;
 }
 
 .admin-close-btn {
@@ -15,7 +16,7 @@
     background-color: transparent;
     color: #ffb606;
     font-size: 30px;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 .admin-list {
@@ -32,6 +33,17 @@
     color: #444;
     transition: 0.3s;
     font-weight: 600;
+}
+
+.admin-list-link-active {
+    text-decoration: none;
+    color: #ffb606;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.admin-list-link-active:hover {
+    color: #ffb606;
 }
 
 .admin-list-link:hover {
