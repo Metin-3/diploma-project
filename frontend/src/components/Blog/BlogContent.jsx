@@ -39,7 +39,7 @@ const BlogContent = () => {
                         <hr />
                         <div className="row g-0">
                             {blogs && blogs.map((blog) => (
-                                <>
+                                <div className='row' key={blog._id}>
                                     <div className="col-lg-1 col-md-2 col-sm-3 col-3 my-4">
                                         <div className='blog-date'>
                                             <h1>{blog.blogDay}</h1>
@@ -70,7 +70,7 @@ const BlogContent = () => {
                                             <p>{blog.blogContent}</p>
                                         </div>
                                     </div>
-                                </>
+                                </div>
                             ))}
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import slide1 from "../../images/homeOne1.jpg";
 import slide2 from "../../images/homeOne2.jpg";
 
@@ -14,7 +15,9 @@ const OneHeader = () => {
                             <h1>THE RESCA</h1>
                             <p>NEW FLAWOURS</p>
                             <div className='text-center'>
-                                <button>Look menu</button>
+                                <Link to="../menu">
+                                    <button>Look menu</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -25,7 +28,9 @@ const OneHeader = () => {
                             <h1>COFFEE & FRRES</h1>
                             <p>NEW FLAWOURS</p>
                             <div className='text-center'>
-                                <button>Detail</button>
+                                <Link to="../menu">
+                                    <button>Detail</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

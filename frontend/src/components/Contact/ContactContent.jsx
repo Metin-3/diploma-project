@@ -125,17 +125,7 @@ const ContactContent = () => {
                             <form action="" onSubmit={handleSubmit(onSubmit)} className='contact-inner-inputs'>
                                 <div className='contact-inner-input'>
                                     <input type="text" {...register('messageName')} value={state.messageName} name="messageName" id='name' placeholder='Full Name*' onChange={handleChange} /> <br />
-                                    {errors.messageName ? (
-                                        <span style={{ color: "red" }}>{errors.messageName.message}</span>
-                                    ) : (
-                                        <></>
-                                    )}
                                     <input type="email" {...register('messageEmail')} value={state.messageEmail} name="messageEmail" id='email' placeholder='Your Email*' onChange={handleChange} />
-                                    {errors.messageEmail ? (
-                                        <span style={{ color: "red", display: "block" }}>{errors.messageEmail.message}</span>
-                                    ) : (
-                                        <></>
-                                    )}
                                 </div>
                                 <input type="text" {...register('messageSubject')} value={state.messageSubject} name="messageSubject" id="subject" placeholder='Subject*' onChange={handleChange} /> <br />
                                 {errors.messageSubject ? (

@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/homeWinery/wineryHeader.css';
 import slide2 from "../../images/coffeehome2.webp";
 import slide1 from "../../images/coffeHome1.webp";
+import { Link } from 'react-router-dom';
 
 const WineryHeader = () => {
     return (
@@ -14,7 +15,9 @@ const WineryHeader = () => {
                         <h1 className='px-5'>WINERY</h1>
                         <p>ONE PLACE, ONE HISTORY</p>
                         <div className='text-center'>
-                            <button>CHECK OUR MENU</button>
+                            <Link to="../menu">
+                                <button>CHECK OUR MENU</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -25,7 +28,9 @@ const WineryHeader = () => {
                         <h1>Samll panisse</h1>
                         <p>Lawrence & Frederick</p>
                         <div className='text-center'>
-                            <button>Detail</button>
+                            <Link to="../menu">
+                                <button>Detail</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

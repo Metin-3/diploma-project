@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/homeVideo/videoHeader.css';
 
 const VideoHeader = () => {
@@ -12,7 +13,9 @@ const VideoHeader = () => {
                     <h1>Restaurant</h1>
                     <p>Lawrence & Frederick</p>
                     <div className='text-center'>
-                        <button>Look menu</button>
+                        <Link to="menu">
+                            <button>Look menu</button>
+                        </Link>
                     </div>
                 </div>
             </div>

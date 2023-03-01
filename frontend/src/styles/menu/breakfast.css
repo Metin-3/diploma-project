@@ -64,7 +64,6 @@
 
 .inner-menu-card-breakfast-active {
     display: block;
-    /* animation: zoomIn; */
-    animation: fadeInUp;
-    animation-duration: 1.5s;
+    animation: zoomIn;
+    animation-duration: 1.2s;
 }

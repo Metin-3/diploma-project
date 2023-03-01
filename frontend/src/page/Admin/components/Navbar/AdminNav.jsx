@@ -16,7 +16,7 @@ const AdminNav = () => {
                 <i className="fa-solid fa-bars"></i>
             </button>
 
-            <div className="offcanvas offcanvas-start" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div className="offcanvas offcanvas-start" data-bs-backdrop="true" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasExampleLabel">Restaurant</h5>
                     <button type="button" className="admin-close-btn text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i className="fa-solid fa-x"></i></button>
@@ -26,6 +26,9 @@ const AdminNav = () => {
                         <ul className='admin-list'>
                             <li>
                                 <Link className={adminNav === 1 ? "admin-list-link-active" : "admin-list-link"} onClick={() => handleAdminNavbar(1)} to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link className={adminNav === 18 ? "admin-list-link-active" : "admin-list-link"} onClick={() => handleAdminNavbar(18)} to="adminMessage">Message</Link>
                             </li>
                             <li>
                                 <Link className={adminNav === 2 ? "admin-list-link-active" : "admin-list-link"} onClick={() => handleAdminNavbar(2)} to="adminMenu">Menu Food</Link>
@@ -77,9 +80,6 @@ const AdminNav = () => {
                             </li>
                             <li>
                                 <Link className={adminNav === 18 ? "admin-list-link-active" : "admin-list-link"} onClick={() => handleAdminNavbar(18)} to="adminGuest">Gallery Guest</Link>
-                            </li>
-                            <li>
-                                <Link className={adminNav === 19 ? "admin-list-link-active" : "admin-list-link"} onClick={() => handleAdminNavbar(19)} to="adminInstagram">Instagram</Link>
                             </li>
                         </ul>
                     </div>

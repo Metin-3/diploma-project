@@ -3,6 +3,7 @@ import '../../styles/homeSeafood/seafoodMenu.css';
 import seafoodMenu1 from '../../images/seafoodMenu1.webp';
 import seafoodMenu2 from '../../images/seafoodMenu2.webp';
 import seafoodMenu3 from '../../images/seafoodMenu3.webp';
+import { Link } from 'react-router-dom';
 
 const SeafoodMenu = () => {
     return (
@@ -24,7 +25,9 @@ const SeafoodMenu = () => {
                             <div className='seafood-menu-card-content'>
                                 <h5>LUNCH</h5>
                                 <p>Praesent tincidunt venenatis augue, vitae imperdiet ligula tristique aliquet condimentum et nunc ut, euismod tincidunt ipsum.</p>
-                                <button>VIEW MENU</button>
+                                <Link to="../menu">
+                                    <button>VIEW MENU</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -37,7 +40,9 @@ const SeafoodMenu = () => {
                             <div className='seafood-menu-card-content'>
                                 <h5>DINNER</h5>
                                 <p>Praesent tincidunt venenatis augue, vitae imperdiet ligula tristique aliquet condimentum et nunc ut, euismod tincidunt ipsum.</p>
-                                <button>VIEW MENU</button>
+                                <Link to="../menu">
+                                    <button>VIEW MENU</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -50,7 +55,9 @@ const SeafoodMenu = () => {
                             <div className='seafood-menu-card-content'>
                                 <h5>DRINKS</h5>
                                 <p>Praesent tincidunt venenatis augue, vitae imperdiet ligula tristique aliquet condimentum et nunc ut, euismod tincidunt ipsum.</p>
-                                <button>VIEW MENU</button>
+                                <Link to="../menu">
+                                    <button>VIEW MENU</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

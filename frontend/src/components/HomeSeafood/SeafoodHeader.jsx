@@ -1,7 +1,7 @@
 import React from 'react';
 import slide1 from "../../images/hero_slide_1.webp";
 import slide2 from "../../images/seafoodSlider.webp";
-
+import { Link } from 'react-router-dom';
 
 const SeafoodHeader = () => {
 
@@ -15,7 +15,9 @@ const SeafoodHeader = () => {
                         <h1 className='px-5'>SEAFOOD</h1>
                         <p>ONE PLACE, ONE HISTORY</p>
                         <div className='text-center'>
-                            <button>CHECK OUR MENU</button>
+                            <Link to="../menu">
+                                <button>CHECK OUR MENU</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -26,7 +28,9 @@ const SeafoodHeader = () => {
                         <h1>Samll panisse</h1>
                         <p>Lawrence & Frederick</p>
                         <div className='text-center'>
-                            <button>Detail</button>
+                            <Link to="../menu">
+                                <button>Detail</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

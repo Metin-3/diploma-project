@@ -1,0 +1,39 @@
+.admin-message-btn {
+    outline: none;
+    border: 1px solid transparent;
+    padding: 5px 15px;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+.admin-message-btn-delete {
+    background-color: rgba(184, 19, 19, 0.79);
+    color: #fff;
+}
+
+.admin-message-btn-close {
+    background-color: rgba(24, 24, 193, 0.85);
+    color: #fff;
+}
+
+.admin-message-input {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-message-input input {
+    width: 50%;
+    padding: 8px 4px;
+    outline: none;
+    border: 1px solid #c9c7c7;
+    border-radius: 6px;
+    background-color: #e4e3e3;
+}
+
+@media(max-width: 768px) {
+    .admin-message-input input {
+        width: 90%;
+    }
+}

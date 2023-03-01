@@ -1,6 +1,6 @@
+import AdminRoot from "../components/AdminRoot";
 import MainRoot from "../components/MainRoot";
 import About from "../page/About";
-import Admin from "../page/Admin/Admin";
 import AdminBlog from "../page/Admin/components/Blog/AdminBlog";
 import AdminBreakfast from "../page/Admin/components/Breakfast/AdminBreakfast";
 import AdminChef from "../page/Admin/components/Chef/AdminChef";
@@ -12,13 +12,13 @@ import AdminGuest from "../page/Admin/components/Gallery/AdminGuest";
 import AdminRes from "../page/Admin/components/Gallery/AdminRes";
 import AdminTable from "../page/Admin/components/Gallery/AdminTable";
 import AdminMenu from "../page/Admin/components/Menu/AdminMenu";
+import AdminMessage from "../page/Admin/components/Message/AdminMessage";
 import AdminShop from "../page/Admin/components/Shop/AdminShop";
 import BakeryShop from "../page/Admin/components/Shop/BakeryShop";
 import BoothShop from "../page/Admin/components/Shop/BoothShop";
 import CartShop from "../page/Admin/components/Shop/CartShop";
 import ChurraShop from "../page/Admin/components/Shop/ChurraShop";
 import RestaurantShop from "../page/Admin/components/Shop/RestaurantShop";
-import AdminInstagram from "../page/Admin/components/WhatNew/AdminInstagram";
 import Blog from "../page/Blog";
 import ComingSoon from "../page/ComingSoon";
 import Contact from "../page/Contact";
@@ -139,7 +139,7 @@ const ROUTES = [
                 element: <Blog />
             },
             {
-                path: "login",
+                path: "admin",
                 element: <LoginUser />
             },
             {
@@ -150,7 +150,7 @@ const ROUTES = [
     },
     {
         path: "admin",
-        element: <Admin />,
+        element: <AdminRoot />,
         children: [
             {
                 path: "adminMenu",
@@ -221,8 +221,8 @@ const ROUTES = [
                 element: <AdminGuest />
             },
             {
-                path: "adminInstagram",
-                element: <AdminInstagram />
+                path: "adminMessage",
+                element: <AdminMessage />
             }
         ]
     }

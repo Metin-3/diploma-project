@@ -3,6 +3,7 @@ import '../../styles/homeWinery/wineryHave.css'
 import have1 from '../../images/wineryHave.jpg'
 import have2 from '../../images/wineryHave2.webp'
 import have3 from '../../images/wineryHave3.webp'
+import { Link } from 'react-router-dom'
 
 const WineryHave = () => {
     return (
@@ -23,7 +24,9 @@ const WineryHave = () => {
                             <div className='winery-menu-card-content'>
                                 <h5>CHAMPAGNE</h5>
                                 <p>Praesent tincidunt venenatis augue, vitae imperdiet ligula tristique aliquet condimentum et nunc ut, euismod tincidunt ipsum.</p>
-                                <button>READ MORE</button>
+                                <Link to="../menu">
+                                    <button>READ MORE</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -35,7 +38,9 @@ const WineryHave = () => {
                             <div className='winery-menu-card-content'>
                                 <h5>WINES</h5>
                                 <p>Praesent tincidunt venenatis augue, vitae imperdiet ligula tristique aliquet condimentum et nunc ut, euismod tincidunt ipsum.</p>
-                                <button>READ MORE</button>
+                                <Link to="../menu">
+                                    <button>READ MORE</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -47,7 +52,9 @@ const WineryHave = () => {
                             <div className='winery-menu-card-content'>
                                 <h5>BEER</h5>
                                 <p>Praesent tincidunt venenatis augue, vitae imperdiet ligula tristique aliquet condimentum et nunc ut, euismod tincidunt ipsum.</p>
-                                <button>READ MORE</button>
+                                <Link to="../menu">
+                                    <button>READ MORE</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

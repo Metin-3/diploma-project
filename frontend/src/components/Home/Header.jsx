@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import slide1 from "../../images/hero_slide_1.webp";
 import slide2 from "../../images/hero_slide_2.webp";
 import '../../styles/home/header.css'
@@ -15,7 +16,9 @@ const Header = () => {
                             <h1>Restaurant</h1>
                             <p>Lawrence & Frederick</p>
                             <div className='text-center'>
-                                <button>Look menu</button>
+                                <Link to="menu">
+                                    <button>Look menu</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -26,7 +29,9 @@ const Header = () => {
                             <h1>Samll panisse</h1>
                             <p>Lawrence & Frederick</p>
                             <div className='text-center'>
-                                <button>Detail</button>
+                                <Link to="menu">
+                                    <button>Detail</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

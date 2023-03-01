@@ -56,3 +56,9 @@
     color: #666;
     font-size: 19px;
 }
+
+@media(max-width: 768px) {
+    .blog-image img {
+        height: 320px;
+    }
+}

@@ -58,7 +58,7 @@ const SeafoodEvent = () => {
                                                         <h5>Wine Testings</h5>
                                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit consequuntur ad nesciunt! Quo eos reprehenderit rem aperiam consequuntur totam culpa?</p>
                                                         <h5>02:00 AM Sunday - 20 November 2016</h5>
-                                                        <Link to="/" className='button'>VIEW DETAIL</Link>
+                                                        <Link to="../events" className='button'>VIEW DETAIL</Link>
                                                     </div>
                                                     <div className='seafood-inner-date'>
                                                         <div className='seafood-date-boxs'>
@@ -89,7 +89,7 @@ const SeafoodEvent = () => {
                                                         <h5>Wine Testings</h5>
                                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius nihil distinctio sequi, explicabo eaque beatae at consequatur deleniti provident voluptatibus.</p>
                                                         <h5>02:00 AM Sunday - 20 November 2016</h5>
-                                                        <Link to="/" className='button'>VIEW DETAIL</Link>
+                                                        <Link to="../events" className='button'>VIEW DETAIL</Link>
                                                     </div>
                                                     <div className='seafood-inner-date'>
                                                         <div className='seafood-date-boxs'>
@@ -120,7 +120,7 @@ const SeafoodEvent = () => {
                                                         <h5>Wine Testings</h5>
                                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita suscipit nam maxime magnam ducimus minus quos reiciendis deleniti quo voluptatibus!</p>
                                                         <h5>02:00 AM Sunday - 20 November 2016</h5>
-                                                        <Link to="/" className='button'>VIEW DETAIL</Link>
+                                                        <Link to="../events" className='button'>VIEW DETAIL</Link>
                                                     </div>
                                                     <div className='seafood-inner-date'>
                                                         <div className='seafood-date-boxs'>

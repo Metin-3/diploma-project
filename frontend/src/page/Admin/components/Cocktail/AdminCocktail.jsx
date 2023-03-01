@@ -6,6 +6,14 @@ import formSchema from "../../../../Schema/formSchema";
 
 const AdminCocktail = () => {
 
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        })
+    }, [])
+
     const {
         register,
         handleSubmit,

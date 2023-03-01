@@ -42,7 +42,7 @@ const New = () => {
                                                     <img src={from1} alt="..." />
                                                 </div>
                                                 <div className="from-slider-content">
-                                                    <h4><Link to="event" className='from-slider-content-link'>Table</Link></h4>
+                                                    <h4><Link to="events" className='from-slider-content-link'>Table</Link></h4>
                                                     <p>07 <br />Jul</p>
                                                 </div>
                                                 <div>
@@ -56,7 +56,7 @@ const New = () => {
                                                     <img src={from2} alt="..." />
                                                 </div>
                                                 <div className="from-slider-content">
-                                                    <h4><Link to="event" className='from-slider-content-link'>Restaurant</Link></h4>
+                                                    <h4><Link to="events" className='from-slider-content-link'>Restaurant</Link></h4>
                                                     <p>07 <br />Jul</p>
                                                 </div>
                                                 <div>
@@ -70,7 +70,7 @@ const New = () => {
                                                     <img src={from3} alt="..." />
                                                 </div>
                                                 <div className="from-slider-content">
-                                                    <h4><Link to="event" className='from-slider-content-link'>White Wine Cheesecake</Link></h4>
+                                                    <h4><Link to="events" className='from-slider-content-link'>White Wine Cheesecake</Link></h4>
                                                     <p>10 <br />Jul</p>
                                                 </div>
                                                 <div>

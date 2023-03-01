@@ -33,7 +33,7 @@ const LoginContent = () => {
                                     <input type="checkbox" id='remember' />
                                     <label htmlFor="remember">Remember me</label>
                                 </div>
-                                <Link to="/admin">
+                                <Link to="adminMenu">
                                     <button>LOGIN</button>
                                 </Link>
                             </form>

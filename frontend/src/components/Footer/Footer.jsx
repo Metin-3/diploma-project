@@ -46,7 +46,7 @@ const Footer = () => {
                     </div>
                     <hr />
                     <div className="col-12">
-                        <p className='footer-bottom'><Link to="/" className='footer-bottom-link'>Resca | Restaurant WordPress Theme</Link> © Powered by <Link to="/" className='footer-bottom-link'>ThimPress.</Link></p>
+                        <p className='footer-bottom'><Link to="https://preview.themeforest.net/item/wordpress-restaurant-theme-resca/full_screen_preview/12124219" className='footer-bottom-link'>Resca | Restaurant WordPress Theme</Link> © Powered by <Link to="https://preview.themeforest.net/item/wordpress-restaurant-theme-resca/full_screen_preview/12124219" className='footer-bottom-link'>ThimPress.</Link></p>
                     </div>
                 </div>
             </div>

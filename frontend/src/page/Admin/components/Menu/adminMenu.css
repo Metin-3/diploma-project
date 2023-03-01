@@ -13,6 +13,11 @@
     display: block;
 }
 
+#admin-menu h1 {
+    font-family: 'Gothic A1', sans-serif;
+    color: #333;
+}
+
 .submit-btn {
     width: 100%;
     outline: none;
